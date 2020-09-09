@@ -410,10 +410,8 @@ namespace Wefa
 
                 save = false;
             }
-            // TODO: This line of code loads data into the 'wefaDataSet2._MAiT_MM_2DB_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_2DB_MITTELSTANDTableAdapter.Fill(this.wefaDataSet2._MAiT_MM_2DB_MITTELSTAND);
-            // TODO: This line of code loads data into the 'wefaDataSet1._MAiT_MM_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_MITTELSTANDTableAdapter2.Fill(this.wefaDataSet1._MAiT_MM_MITTELSTAND);
+            this._MAiT_MM_2DB_MITTELSTANDTableAdapter1.Fill(this.qsystestwefa1405DataSet1._MAiT_MM_2DB_MITTELSTAND);
+            this._MAiT_MM_MITTELSTANDTableAdapter3.Fill(this.qsystestwefa1405DataSet._MAiT_MM_MITTELSTAND);
             this.mAiTMMMITTELSTANDBindingSource.ResetBindings(false);
             this.dataGridView1.Refresh();
            this.dataGridView1.Parent.Refresh();
@@ -478,10 +476,8 @@ namespace Wefa
                 }
                 
             }
-            // TODO: This line of code loads data into the 'wefaDataSet2._MAiT_MM_2DB_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_2DB_MITTELSTANDTableAdapter.Fill(this.wefaDataSet2._MAiT_MM_2DB_MITTELSTAND);
-            // TODO: This line of code loads data into the 'wefaDataSet1._MAiT_MM_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_MITTELSTANDTableAdapter2.Fill(this.wefaDataSet1._MAiT_MM_MITTELSTAND);
+            this._MAiT_MM_2DB_MITTELSTANDTableAdapter1.Fill(this.qsystestwefa1405DataSet1._MAiT_MM_2DB_MITTELSTAND);
+            this._MAiT_MM_MITTELSTANDTableAdapter3.Fill(this.qsystestwefa1405DataSet._MAiT_MM_MITTELSTAND);
             this.mAiTMMMITTELSTANDBindingSource.ResetBindings(false);
             this.dataGridView1.Refresh();
            
@@ -570,10 +566,10 @@ namespace Wefa
                                                           
                 }
             }
-            // TODO: This line of code loads data into the 'wefaDataSet2._MAiT_MM_2DB_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_2DB_MITTELSTANDTableAdapter.Fill(this.wefaDataSet2._MAiT_MM_2DB_MITTELSTAND);
-            // TODO: This line of code loads data into the 'wefaDataSet1._MAiT_MM_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_MITTELSTANDTableAdapter2.Fill(this.wefaDataSet1._MAiT_MM_MITTELSTAND);
+            
+            this._MAiT_MM_2DB_MITTELSTANDTableAdapter1.Fill(this.qsystestwefa1405DataSet1._MAiT_MM_2DB_MITTELSTAND);
+            this._MAiT_MM_MITTELSTANDTableAdapter3.Fill(this.qsystestwefa1405DataSet._MAiT_MM_MITTELSTAND);
+
             this.mAiTMMMITTELSTANDBindingSource.ResetBindings(false);
             this.dataGridView1.Refresh();
             
@@ -585,10 +581,11 @@ namespace Wefa
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'wefaDataSet2._MAiT_MM_2DB_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_2DB_MITTELSTANDTableAdapter.Fill(this.wefaDataSet2._MAiT_MM_2DB_MITTELSTAND);
-            // TODO: This line of code loads data into the 'wefaDataSet1._MAiT_MM_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_MITTELSTANDTableAdapter2.Fill(this.wefaDataSet1._MAiT_MM_MITTELSTAND);
+            // TODO: This line of code loads data into the 'qsystestwefa1405DataSet1._MAiT_MM_2DB_MITTELSTAND' table. You can move, or remove it, as needed.
+            this._MAiT_MM_2DB_MITTELSTANDTableAdapter1.Fill(this.qsystestwefa1405DataSet1._MAiT_MM_2DB_MITTELSTAND);
+            // TODO: This line of code loads data into the 'qsystestwefa1405DataSet._MAiT_MM_MITTELSTAND' table. You can move, or remove it, as needed.
+            this._MAiT_MM_MITTELSTANDTableAdapter3.Fill(this.qsystestwefa1405DataSet._MAiT_MM_MITTELSTAND);
+            
 
         }
 
@@ -1354,10 +1351,8 @@ namespace Wefa
                 createClicks_2db = 0;
                 save = false;
             }
-            // TODO: This line of code loads data into the 'wefaDataSet2._MAiT_MM_2DB_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_2DB_MITTELSTANDTableAdapter.Fill(this.wefaDataSet2._MAiT_MM_2DB_MITTELSTAND);
-            // TODO: This line of code loads data into the 'wefaDataSet1._MAiT_MM_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_MITTELSTANDTableAdapter2.Fill(this.wefaDataSet1._MAiT_MM_MITTELSTAND);
+            this._MAiT_MM_2DB_MITTELSTANDTableAdapter1.Fill(this.qsystestwefa1405DataSet1._MAiT_MM_2DB_MITTELSTAND);
+            this._MAiT_MM_MITTELSTANDTableAdapter3.Fill(this.qsystestwefa1405DataSet._MAiT_MM_MITTELSTAND);
             this.dataGridView2.Refresh();
             this.dataGridView2.Parent.Refresh();
         }
@@ -1460,10 +1455,8 @@ namespace Wefa
                     
 
             }
-            // TODO: This line of code loads data into the 'wefaDataSet2._MAiT_MM_2DB_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_2DB_MITTELSTANDTableAdapter.Fill(this.wefaDataSet2._MAiT_MM_2DB_MITTELSTAND);
-            // TODO: This line of code loads data into the 'wefaDataSet1._MAiT_MM_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_MITTELSTANDTableAdapter2.Fill(this.wefaDataSet1._MAiT_MM_MITTELSTAND);
+            this._MAiT_MM_2DB_MITTELSTANDTableAdapter1.Fill(this.qsystestwefa1405DataSet1._MAiT_MM_2DB_MITTELSTAND);
+            this._MAiT_MM_MITTELSTANDTableAdapter3.Fill(this.qsystestwefa1405DataSet._MAiT_MM_MITTELSTAND);
             this.dataGridView2.Refresh();
             this.dataGridView2.Parent.Refresh();
 
@@ -1531,10 +1524,8 @@ namespace Wefa
                     
                 }
             }
-            // TODO: This line of code loads data into the 'wefaDataSet2._MAiT_MM_2DB_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_2DB_MITTELSTANDTableAdapter.Fill(this.wefaDataSet2._MAiT_MM_2DB_MITTELSTAND);
-            // TODO: This line of code loads data into the 'wefaDataSet1._MAiT_MM_MITTELSTAND' table. You can move, or remove it, as needed.
-            this._MAiT_MM_MITTELSTANDTableAdapter2.Fill(this.wefaDataSet1._MAiT_MM_MITTELSTAND);
+            this._MAiT_MM_2DB_MITTELSTANDTableAdapter1.Fill(this.qsystestwefa1405DataSet1._MAiT_MM_2DB_MITTELSTAND);
+            this._MAiT_MM_MITTELSTANDTableAdapter3.Fill(this.qsystestwefa1405DataSet._MAiT_MM_MITTELSTAND);
             this.mAiTMM2DBMITTELSTANDBindingSource.ResetBindings(false);
             this.dataGridView2.Refresh();
             this.dataGridView2.Parent.Refresh();
@@ -1883,6 +1874,42 @@ namespace Wefa
             this.dataGridView1.Parent.Refresh();
             this.dataGridView2.Refresh();
             this.dataGridView2.Parent.Refresh();
+        }
+        
+        private void dataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+           {
+                
+                this.contextMenuStrip1.Show(this.dataGridView1, e.Location);
+                contextMenuStrip1.Show(Cursor.Position);
+            }
+        }
+
+        private void löschenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string sql1Dbr =  " DELETE FROM _MAIT_MM_MITTELSTAND WHERE NLFDAUFTRAGID = @nLfdAuftragId ";
+            string sql2Dbr = " DELETE FROM _MAiT_MM_2DB_MITTELSTAND WHERE NLFDAUFTRAGID = @nLfdAuftragId ";
+
+
+            foreach (DataGridViewRow row in this.dataGridView1.SelectedRows)
+            {
+                
+                string auftragId = row.Cells[29].Value.ToString();
+                decimal nAuftragId = decimal.Parse(auftragId);
+                QmsDFQWriter.DeleteRecord(nAuftragId, sql1Dbr);
+                this.dataGridView1.Rows.Remove(row);
+            }
+
+            foreach (DataGridViewRow row in this.dataGridView2.SelectedRows) 
+            {
+                
+                string auftragId = row.Cells[48].Value.ToString();
+                decimal nAuftragId = decimal.Parse(auftragId);
+                QmsDFQWriter.DeleteRecord(nAuftragId, sql2Dbr);
+                this.dataGridView2.Rows.Remove(row);
+            }
+
         }
     }
 }

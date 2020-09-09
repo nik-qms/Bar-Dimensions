@@ -288,35 +288,6 @@
             this.button_new_rmn_2 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sPANRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dTLAENDERUNGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sZUSINFO20DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sDTSERIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sPTSERIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sFABEZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sPRUEFERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sZEICHBEZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sARTIKELNRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sMANDBEZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dM101DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dM102DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dM103DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dM104DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dM105DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dM106DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dM9RMINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dM9RMAXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dM9RAUSSENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dSM101DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dSM102DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dSM103DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dSM104DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dSM105DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dSM106DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dSM9RMINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dSM9RMAXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dSM9RAUSSENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dMMANZAHLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mAiTMMMITTELSTANDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wefaDataSet1 = new Wefa.wefaDataSet1();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -383,6 +354,44 @@
             this._MAiT_MM_MITTELSTANDTableAdapter1 = new Wefa.wefaDataSetTableAdapters._MAiT_MM_MITTELSTANDTableAdapter();
             this._MAiT_MM_MITTELSTANDTableAdapter2 = new Wefa.wefaDataSet1TableAdapters._MAiT_MM_MITTELSTANDTableAdapter();
             this._MAiT_MM_2DB_MITTELSTANDTableAdapter = new Wefa.wefaDataSet2TableAdapters._MAiT_MM_2DB_MITTELSTANDTableAdapter();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.löschenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dMMANZAHLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dSM9RAUSSENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dSM9RMAXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dSM9RMINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dSM106DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dSM105DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dSM104DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dSM103DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dSM102DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dSM101DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dM9RAUSSENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dM9RMAXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dM9RMINDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dM106DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dM105DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dM104DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dM103DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dM102DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dM101DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sMANDBEZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sARTIKELNRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sZEICHBEZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sPRUEFERDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sFABEZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sPTSERIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDTSERIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sZUSINFO20DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dTLAENDERUNGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sPANRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qsystestwefa1405DataSet = new Wefa.qsystestwefa1405DataSet();
+            this.mAiTMMMITTELSTANDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this._MAiT_MM_MITTELSTANDTableAdapter3 = new Wefa.qsystestwefa1405DataSetTableAdapters._MAiT_MM_MITTELSTANDTableAdapter();
+            this.NLFDAUFTRAGID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qsystestwefa1405DataSet1 = new Wefa.qsystestwefa1405DataSet1();
+            this.mAiTMM2DBMITTELSTANDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this._MAiT_MM_2DB_MITTELSTANDTableAdapter1 = new Wefa.qsystestwefa1405DataSet1TableAdapters._MAiT_MM_2DB_MITTELSTANDTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.mMMITTELSTANDCKBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wefaDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wefaDataSet)).BeginInit();
@@ -425,6 +434,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.mAiTMM2DBMITTELSTANDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wefaDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mMMITTELSTANDCKBindingSource)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qsystestwefa1405DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mAiTMMMITTELSTANDBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qsystestwefa1405DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mAiTMM2DBMITTELSTANDBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // mMMITTELSTANDCKBindingSource1
@@ -3258,8 +3272,9 @@
             this.dSM9RMINDataGridViewTextBoxColumn,
             this.dSM9RMAXDataGridViewTextBoxColumn,
             this.dSM9RAUSSENDataGridViewTextBoxColumn,
-            this.dMMANZAHLDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.mAiTMMMITTELSTANDBindingSource;
+            this.dMMANZAHLDataGridViewTextBoxColumn,
+            this.NLFDAUFTRAGID});
+            this.dataGridView1.DataSource = this.mAiTMMMITTELSTANDBindingSource1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -3267,239 +3282,8 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1412, 774);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseUp);
             this.dataGridView1.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseDoubleClick);
-            // 
-            // sPANRDataGridViewTextBoxColumn
-            // 
-            this.sPANRDataGridViewTextBoxColumn.DataPropertyName = "SPANR";
-            this.sPANRDataGridViewTextBoxColumn.HeaderText = "Rückmeldenummer";
-            this.sPANRDataGridViewTextBoxColumn.Name = "sPANRDataGridViewTextBoxColumn";
-            this.sPANRDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sPANRDataGridViewTextBoxColumn.Width = 145;
-            // 
-            // dTLAENDERUNGDataGridViewTextBoxColumn
-            // 
-            this.dTLAENDERUNGDataGridViewTextBoxColumn.DataPropertyName = "DTLAENDERUNG";
-            this.dTLAENDERUNGDataGridViewTextBoxColumn.HeaderText = "Letzte geändert am";
-            this.dTLAENDERUNGDataGridViewTextBoxColumn.Name = "dTLAENDERUNGDataGridViewTextBoxColumn";
-            this.dTLAENDERUNGDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dTLAENDERUNGDataGridViewTextBoxColumn.Width = 116;
-            // 
-            // sZUSINFO20DataGridViewTextBoxColumn
-            // 
-            this.sZUSINFO20DataGridViewTextBoxColumn.DataPropertyName = "SZUSINFO20";
-            this.sZUSINFO20DataGridViewTextBoxColumn.HeaderText = "SZUSINFO20";
-            this.sZUSINFO20DataGridViewTextBoxColumn.Name = "sZUSINFO20DataGridViewTextBoxColumn";
-            this.sZUSINFO20DataGridViewTextBoxColumn.ReadOnly = true;
-            this.sZUSINFO20DataGridViewTextBoxColumn.Width = 111;
-            // 
-            // sDTSERIALDataGridViewTextBoxColumn
-            // 
-            this.sDTSERIALDataGridViewTextBoxColumn.DataPropertyName = "SDTSERIAL";
-            this.sDTSERIALDataGridViewTextBoxColumn.HeaderText = "SDTSERIAL";
-            this.sDTSERIALDataGridViewTextBoxColumn.Name = "sDTSERIALDataGridViewTextBoxColumn";
-            this.sDTSERIALDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sDTSERIALDataGridViewTextBoxColumn.Width = 104;
-            // 
-            // sPTSERIALDataGridViewTextBoxColumn
-            // 
-            this.sPTSERIALDataGridViewTextBoxColumn.DataPropertyName = "SPTSERIAL";
-            this.sPTSERIALDataGridViewTextBoxColumn.HeaderText = "SPTSERIAL";
-            this.sPTSERIALDataGridViewTextBoxColumn.Name = "sPTSERIALDataGridViewTextBoxColumn";
-            this.sPTSERIALDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sPTSERIALDataGridViewTextBoxColumn.Width = 104;
-            // 
-            // sFABEZDataGridViewTextBoxColumn
-            // 
-            this.sFABEZDataGridViewTextBoxColumn.DataPropertyName = "SFABEZ";
-            this.sFABEZDataGridViewTextBoxColumn.HeaderText = "SFABEZ";
-            this.sFABEZDataGridViewTextBoxColumn.Name = "sFABEZDataGridViewTextBoxColumn";
-            this.sFABEZDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sFABEZDataGridViewTextBoxColumn.Width = 83;
-            // 
-            // sPRUEFERDataGridViewTextBoxColumn
-            // 
-            this.sPRUEFERDataGridViewTextBoxColumn.DataPropertyName = "SPRUEFER";
-            this.sPRUEFERDataGridViewTextBoxColumn.HeaderText = "SPRUEFER";
-            this.sPRUEFERDataGridViewTextBoxColumn.Name = "sPRUEFERDataGridViewTextBoxColumn";
-            this.sPRUEFERDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sPRUEFERDataGridViewTextBoxColumn.Width = 104;
-            // 
-            // sZEICHBEZDataGridViewTextBoxColumn
-            // 
-            this.sZEICHBEZDataGridViewTextBoxColumn.DataPropertyName = "SZEICHBEZ";
-            this.sZEICHBEZDataGridViewTextBoxColumn.HeaderText = "SZEICHBEZ";
-            this.sZEICHBEZDataGridViewTextBoxColumn.Name = "sZEICHBEZDataGridViewTextBoxColumn";
-            this.sZEICHBEZDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sZEICHBEZDataGridViewTextBoxColumn.Width = 104;
-            // 
-            // sARTIKELNRDataGridViewTextBoxColumn
-            // 
-            this.sARTIKELNRDataGridViewTextBoxColumn.DataPropertyName = "SARTIKELNR";
-            this.sARTIKELNRDataGridViewTextBoxColumn.HeaderText = "SARTIKELNR";
-            this.sARTIKELNRDataGridViewTextBoxColumn.Name = "sARTIKELNRDataGridViewTextBoxColumn";
-            this.sARTIKELNRDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sARTIKELNRDataGridViewTextBoxColumn.Width = 113;
-            // 
-            // sMANDBEZDataGridViewTextBoxColumn
-            // 
-            this.sMANDBEZDataGridViewTextBoxColumn.DataPropertyName = "SMANDBEZ";
-            this.sMANDBEZDataGridViewTextBoxColumn.HeaderText = "SMANDBEZ";
-            this.sMANDBEZDataGridViewTextBoxColumn.Name = "sMANDBEZDataGridViewTextBoxColumn";
-            this.sMANDBEZDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sMANDBEZDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // dM101DataGridViewTextBoxColumn
-            // 
-            this.dM101DataGridViewTextBoxColumn.DataPropertyName = "DM101";
-            this.dM101DataGridViewTextBoxColumn.HeaderText = "DM101";
-            this.dM101DataGridViewTextBoxColumn.Name = "dM101DataGridViewTextBoxColumn";
-            this.dM101DataGridViewTextBoxColumn.ReadOnly = true;
-            this.dM101DataGridViewTextBoxColumn.Width = 74;
-            // 
-            // dM102DataGridViewTextBoxColumn
-            // 
-            this.dM102DataGridViewTextBoxColumn.DataPropertyName = "DM102";
-            this.dM102DataGridViewTextBoxColumn.HeaderText = "DM102";
-            this.dM102DataGridViewTextBoxColumn.Name = "dM102DataGridViewTextBoxColumn";
-            this.dM102DataGridViewTextBoxColumn.ReadOnly = true;
-            this.dM102DataGridViewTextBoxColumn.Width = 74;
-            // 
-            // dM103DataGridViewTextBoxColumn
-            // 
-            this.dM103DataGridViewTextBoxColumn.DataPropertyName = "DM103";
-            this.dM103DataGridViewTextBoxColumn.HeaderText = "DM103";
-            this.dM103DataGridViewTextBoxColumn.Name = "dM103DataGridViewTextBoxColumn";
-            this.dM103DataGridViewTextBoxColumn.ReadOnly = true;
-            this.dM103DataGridViewTextBoxColumn.Width = 74;
-            // 
-            // dM104DataGridViewTextBoxColumn
-            // 
-            this.dM104DataGridViewTextBoxColumn.DataPropertyName = "DM104";
-            this.dM104DataGridViewTextBoxColumn.HeaderText = "DM104";
-            this.dM104DataGridViewTextBoxColumn.Name = "dM104DataGridViewTextBoxColumn";
-            this.dM104DataGridViewTextBoxColumn.ReadOnly = true;
-            this.dM104DataGridViewTextBoxColumn.Width = 74;
-            // 
-            // dM105DataGridViewTextBoxColumn
-            // 
-            this.dM105DataGridViewTextBoxColumn.DataPropertyName = "DM105";
-            this.dM105DataGridViewTextBoxColumn.HeaderText = "DM105";
-            this.dM105DataGridViewTextBoxColumn.Name = "dM105DataGridViewTextBoxColumn";
-            this.dM105DataGridViewTextBoxColumn.ReadOnly = true;
-            this.dM105DataGridViewTextBoxColumn.Width = 74;
-            // 
-            // dM106DataGridViewTextBoxColumn
-            // 
-            this.dM106DataGridViewTextBoxColumn.DataPropertyName = "DM106";
-            this.dM106DataGridViewTextBoxColumn.HeaderText = "DM106";
-            this.dM106DataGridViewTextBoxColumn.Name = "dM106DataGridViewTextBoxColumn";
-            this.dM106DataGridViewTextBoxColumn.ReadOnly = true;
-            this.dM106DataGridViewTextBoxColumn.Width = 74;
-            // 
-            // dM9RMINDataGridViewTextBoxColumn
-            // 
-            this.dM9RMINDataGridViewTextBoxColumn.DataPropertyName = "DM9RMIN";
-            this.dM9RMINDataGridViewTextBoxColumn.HeaderText = "DM9RMIN";
-            this.dM9RMINDataGridViewTextBoxColumn.Name = "dM9RMINDataGridViewTextBoxColumn";
-            this.dM9RMINDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dM9RMINDataGridViewTextBoxColumn.Width = 92;
-            // 
-            // dM9RMAXDataGridViewTextBoxColumn
-            // 
-            this.dM9RMAXDataGridViewTextBoxColumn.DataPropertyName = "DM9RMAX";
-            this.dM9RMAXDataGridViewTextBoxColumn.HeaderText = "DM9RMAX";
-            this.dM9RMAXDataGridViewTextBoxColumn.Name = "dM9RMAXDataGridViewTextBoxColumn";
-            this.dM9RMAXDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dM9RMAXDataGridViewTextBoxColumn.Width = 96;
-            // 
-            // dM9RAUSSENDataGridViewTextBoxColumn
-            // 
-            this.dM9RAUSSENDataGridViewTextBoxColumn.DataPropertyName = "DM9RAUSSEN";
-            this.dM9RAUSSENDataGridViewTextBoxColumn.HeaderText = "DM9RAUSSEN";
-            this.dM9RAUSSENDataGridViewTextBoxColumn.Name = "dM9RAUSSENDataGridViewTextBoxColumn";
-            this.dM9RAUSSENDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dM9RAUSSENDataGridViewTextBoxColumn.Width = 123;
-            // 
-            // dSM101DataGridViewTextBoxColumn
-            // 
-            this.dSM101DataGridViewTextBoxColumn.DataPropertyName = "DSM101";
-            this.dSM101DataGridViewTextBoxColumn.HeaderText = "DSM101";
-            this.dSM101DataGridViewTextBoxColumn.Name = "dSM101DataGridViewTextBoxColumn";
-            this.dSM101DataGridViewTextBoxColumn.ReadOnly = true;
-            this.dSM101DataGridViewTextBoxColumn.Width = 83;
-            // 
-            // dSM102DataGridViewTextBoxColumn
-            // 
-            this.dSM102DataGridViewTextBoxColumn.DataPropertyName = "DSM102";
-            this.dSM102DataGridViewTextBoxColumn.HeaderText = "DSM102";
-            this.dSM102DataGridViewTextBoxColumn.Name = "dSM102DataGridViewTextBoxColumn";
-            this.dSM102DataGridViewTextBoxColumn.ReadOnly = true;
-            this.dSM102DataGridViewTextBoxColumn.Width = 83;
-            // 
-            // dSM103DataGridViewTextBoxColumn
-            // 
-            this.dSM103DataGridViewTextBoxColumn.DataPropertyName = "DSM103";
-            this.dSM103DataGridViewTextBoxColumn.HeaderText = "DSM103";
-            this.dSM103DataGridViewTextBoxColumn.Name = "dSM103DataGridViewTextBoxColumn";
-            this.dSM103DataGridViewTextBoxColumn.ReadOnly = true;
-            this.dSM103DataGridViewTextBoxColumn.Width = 83;
-            // 
-            // dSM104DataGridViewTextBoxColumn
-            // 
-            this.dSM104DataGridViewTextBoxColumn.DataPropertyName = "DSM104";
-            this.dSM104DataGridViewTextBoxColumn.HeaderText = "DSM104";
-            this.dSM104DataGridViewTextBoxColumn.Name = "dSM104DataGridViewTextBoxColumn";
-            this.dSM104DataGridViewTextBoxColumn.ReadOnly = true;
-            this.dSM104DataGridViewTextBoxColumn.Width = 83;
-            // 
-            // dSM105DataGridViewTextBoxColumn
-            // 
-            this.dSM105DataGridViewTextBoxColumn.DataPropertyName = "DSM105";
-            this.dSM105DataGridViewTextBoxColumn.HeaderText = "DSM105";
-            this.dSM105DataGridViewTextBoxColumn.Name = "dSM105DataGridViewTextBoxColumn";
-            this.dSM105DataGridViewTextBoxColumn.ReadOnly = true;
-            this.dSM105DataGridViewTextBoxColumn.Width = 83;
-            // 
-            // dSM106DataGridViewTextBoxColumn
-            // 
-            this.dSM106DataGridViewTextBoxColumn.DataPropertyName = "DSM106";
-            this.dSM106DataGridViewTextBoxColumn.HeaderText = "DSM106";
-            this.dSM106DataGridViewTextBoxColumn.Name = "dSM106DataGridViewTextBoxColumn";
-            this.dSM106DataGridViewTextBoxColumn.ReadOnly = true;
-            this.dSM106DataGridViewTextBoxColumn.Width = 83;
-            // 
-            // dSM9RMINDataGridViewTextBoxColumn
-            // 
-            this.dSM9RMINDataGridViewTextBoxColumn.DataPropertyName = "DSM9RMIN";
-            this.dSM9RMINDataGridViewTextBoxColumn.HeaderText = "DSM9RMIN";
-            this.dSM9RMINDataGridViewTextBoxColumn.Name = "dSM9RMINDataGridViewTextBoxColumn";
-            this.dSM9RMINDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dSM9RMINDataGridViewTextBoxColumn.Width = 101;
-            // 
-            // dSM9RMAXDataGridViewTextBoxColumn
-            // 
-            this.dSM9RMAXDataGridViewTextBoxColumn.DataPropertyName = "DSM9RMAX";
-            this.dSM9RMAXDataGridViewTextBoxColumn.HeaderText = "DSM9RMAX";
-            this.dSM9RMAXDataGridViewTextBoxColumn.Name = "dSM9RMAXDataGridViewTextBoxColumn";
-            this.dSM9RMAXDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dSM9RMAXDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // dSM9RAUSSENDataGridViewTextBoxColumn
-            // 
-            this.dSM9RAUSSENDataGridViewTextBoxColumn.DataPropertyName = "DSM9RAUSSEN";
-            this.dSM9RAUSSENDataGridViewTextBoxColumn.HeaderText = "DSM9RAUSSEN";
-            this.dSM9RAUSSENDataGridViewTextBoxColumn.Name = "dSM9RAUSSENDataGridViewTextBoxColumn";
-            this.dSM9RAUSSENDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dSM9RAUSSENDataGridViewTextBoxColumn.Width = 132;
-            // 
-            // dMMANZAHLDataGridViewTextBoxColumn
-            // 
-            this.dMMANZAHLDataGridViewTextBoxColumn.DataPropertyName = "DMMANZAHL";
-            this.dMMANZAHLDataGridViewTextBoxColumn.HeaderText = "DMMANZAHL";
-            this.dMMANZAHLDataGridViewTextBoxColumn.Name = "dMMANZAHLDataGridViewTextBoxColumn";
-            this.dMMANZAHLDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dMMANZAHLDataGridViewTextBoxColumn.Width = 114;
             // 
             // mAiTMMMITTELSTANDBindingSource
             // 
@@ -3579,13 +3363,14 @@
             this.dD2SM9RAUSSENDataGridViewTextBoxColumn,
             this.dMMANZAHLDataGridViewTextBoxColumn1,
             this.dSM1221DataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.mAiTMM2DBMITTELSTANDBindingSource;
+            this.dataGridView2.DataSource = this.mAiTMM2DBMITTELSTANDBindingSource1;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(1412, 774);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseUp);
             this.dataGridView2.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_RowHeaderMouseDoubleClick);
             // 
             // sPANRDataGridViewTextBoxColumn1
@@ -4018,6 +3803,288 @@
             // 
             this._MAiT_MM_2DB_MITTELSTANDTableAdapter.ClearBeforeFill = true;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.löschenToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(119, 26);
+            // 
+            // löschenToolStripMenuItem
+            // 
+            this.löschenToolStripMenuItem.Name = "löschenToolStripMenuItem";
+            this.löschenToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.löschenToolStripMenuItem.Text = "Löschen";
+            this.löschenToolStripMenuItem.Click += new System.EventHandler(this.löschenToolStripMenuItem_Click);
+            // 
+            // dMMANZAHLDataGridViewTextBoxColumn
+            // 
+            this.dMMANZAHLDataGridViewTextBoxColumn.DataPropertyName = "DMMANZAHL";
+            this.dMMANZAHLDataGridViewTextBoxColumn.HeaderText = "DMMANZAHL";
+            this.dMMANZAHLDataGridViewTextBoxColumn.Name = "dMMANZAHLDataGridViewTextBoxColumn";
+            this.dMMANZAHLDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dMMANZAHLDataGridViewTextBoxColumn.Width = 114;
+            // 
+            // dSM9RAUSSENDataGridViewTextBoxColumn
+            // 
+            this.dSM9RAUSSENDataGridViewTextBoxColumn.DataPropertyName = "DSM9RAUSSEN";
+            this.dSM9RAUSSENDataGridViewTextBoxColumn.HeaderText = "DSM9RAUSSEN";
+            this.dSM9RAUSSENDataGridViewTextBoxColumn.Name = "dSM9RAUSSENDataGridViewTextBoxColumn";
+            this.dSM9RAUSSENDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dSM9RAUSSENDataGridViewTextBoxColumn.Width = 132;
+            // 
+            // dSM9RMAXDataGridViewTextBoxColumn
+            // 
+            this.dSM9RMAXDataGridViewTextBoxColumn.DataPropertyName = "DSM9RMAX";
+            this.dSM9RMAXDataGridViewTextBoxColumn.HeaderText = "DSM9RMAX";
+            this.dSM9RMAXDataGridViewTextBoxColumn.Name = "dSM9RMAXDataGridViewTextBoxColumn";
+            this.dSM9RMAXDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dSM9RMAXDataGridViewTextBoxColumn.Width = 105;
+            // 
+            // dSM9RMINDataGridViewTextBoxColumn
+            // 
+            this.dSM9RMINDataGridViewTextBoxColumn.DataPropertyName = "DSM9RMIN";
+            this.dSM9RMINDataGridViewTextBoxColumn.HeaderText = "DSM9RMIN";
+            this.dSM9RMINDataGridViewTextBoxColumn.Name = "dSM9RMINDataGridViewTextBoxColumn";
+            this.dSM9RMINDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dSM9RMINDataGridViewTextBoxColumn.Width = 101;
+            // 
+            // dSM106DataGridViewTextBoxColumn
+            // 
+            this.dSM106DataGridViewTextBoxColumn.DataPropertyName = "DSM106";
+            this.dSM106DataGridViewTextBoxColumn.HeaderText = "DSM106";
+            this.dSM106DataGridViewTextBoxColumn.Name = "dSM106DataGridViewTextBoxColumn";
+            this.dSM106DataGridViewTextBoxColumn.ReadOnly = true;
+            this.dSM106DataGridViewTextBoxColumn.Width = 83;
+            // 
+            // dSM105DataGridViewTextBoxColumn
+            // 
+            this.dSM105DataGridViewTextBoxColumn.DataPropertyName = "DSM105";
+            this.dSM105DataGridViewTextBoxColumn.HeaderText = "DSM105";
+            this.dSM105DataGridViewTextBoxColumn.Name = "dSM105DataGridViewTextBoxColumn";
+            this.dSM105DataGridViewTextBoxColumn.ReadOnly = true;
+            this.dSM105DataGridViewTextBoxColumn.Width = 83;
+            // 
+            // dSM104DataGridViewTextBoxColumn
+            // 
+            this.dSM104DataGridViewTextBoxColumn.DataPropertyName = "DSM104";
+            this.dSM104DataGridViewTextBoxColumn.HeaderText = "DSM104";
+            this.dSM104DataGridViewTextBoxColumn.Name = "dSM104DataGridViewTextBoxColumn";
+            this.dSM104DataGridViewTextBoxColumn.ReadOnly = true;
+            this.dSM104DataGridViewTextBoxColumn.Width = 83;
+            // 
+            // dSM103DataGridViewTextBoxColumn
+            // 
+            this.dSM103DataGridViewTextBoxColumn.DataPropertyName = "DSM103";
+            this.dSM103DataGridViewTextBoxColumn.HeaderText = "DSM103";
+            this.dSM103DataGridViewTextBoxColumn.Name = "dSM103DataGridViewTextBoxColumn";
+            this.dSM103DataGridViewTextBoxColumn.ReadOnly = true;
+            this.dSM103DataGridViewTextBoxColumn.Width = 83;
+            // 
+            // dSM102DataGridViewTextBoxColumn
+            // 
+            this.dSM102DataGridViewTextBoxColumn.DataPropertyName = "DSM102";
+            this.dSM102DataGridViewTextBoxColumn.HeaderText = "DSM102";
+            this.dSM102DataGridViewTextBoxColumn.Name = "dSM102DataGridViewTextBoxColumn";
+            this.dSM102DataGridViewTextBoxColumn.ReadOnly = true;
+            this.dSM102DataGridViewTextBoxColumn.Width = 83;
+            // 
+            // dSM101DataGridViewTextBoxColumn
+            // 
+            this.dSM101DataGridViewTextBoxColumn.DataPropertyName = "DSM101";
+            this.dSM101DataGridViewTextBoxColumn.HeaderText = "DSM101";
+            this.dSM101DataGridViewTextBoxColumn.Name = "dSM101DataGridViewTextBoxColumn";
+            this.dSM101DataGridViewTextBoxColumn.ReadOnly = true;
+            this.dSM101DataGridViewTextBoxColumn.Width = 83;
+            // 
+            // dM9RAUSSENDataGridViewTextBoxColumn
+            // 
+            this.dM9RAUSSENDataGridViewTextBoxColumn.DataPropertyName = "DM9RAUSSEN";
+            this.dM9RAUSSENDataGridViewTextBoxColumn.HeaderText = "DM9RAUSSEN";
+            this.dM9RAUSSENDataGridViewTextBoxColumn.Name = "dM9RAUSSENDataGridViewTextBoxColumn";
+            this.dM9RAUSSENDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dM9RAUSSENDataGridViewTextBoxColumn.Width = 123;
+            // 
+            // dM9RMAXDataGridViewTextBoxColumn
+            // 
+            this.dM9RMAXDataGridViewTextBoxColumn.DataPropertyName = "DM9RMAX";
+            this.dM9RMAXDataGridViewTextBoxColumn.HeaderText = "DM9RMAX";
+            this.dM9RMAXDataGridViewTextBoxColumn.Name = "dM9RMAXDataGridViewTextBoxColumn";
+            this.dM9RMAXDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dM9RMAXDataGridViewTextBoxColumn.Width = 96;
+            // 
+            // dM9RMINDataGridViewTextBoxColumn
+            // 
+            this.dM9RMINDataGridViewTextBoxColumn.DataPropertyName = "DM9RMIN";
+            this.dM9RMINDataGridViewTextBoxColumn.HeaderText = "DM9RMIN";
+            this.dM9RMINDataGridViewTextBoxColumn.Name = "dM9RMINDataGridViewTextBoxColumn";
+            this.dM9RMINDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dM9RMINDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // dM106DataGridViewTextBoxColumn
+            // 
+            this.dM106DataGridViewTextBoxColumn.DataPropertyName = "DM106";
+            this.dM106DataGridViewTextBoxColumn.HeaderText = "DM106";
+            this.dM106DataGridViewTextBoxColumn.Name = "dM106DataGridViewTextBoxColumn";
+            this.dM106DataGridViewTextBoxColumn.ReadOnly = true;
+            this.dM106DataGridViewTextBoxColumn.Width = 74;
+            // 
+            // dM105DataGridViewTextBoxColumn
+            // 
+            this.dM105DataGridViewTextBoxColumn.DataPropertyName = "DM105";
+            this.dM105DataGridViewTextBoxColumn.HeaderText = "DM105";
+            this.dM105DataGridViewTextBoxColumn.Name = "dM105DataGridViewTextBoxColumn";
+            this.dM105DataGridViewTextBoxColumn.ReadOnly = true;
+            this.dM105DataGridViewTextBoxColumn.Width = 74;
+            // 
+            // dM104DataGridViewTextBoxColumn
+            // 
+            this.dM104DataGridViewTextBoxColumn.DataPropertyName = "DM104";
+            this.dM104DataGridViewTextBoxColumn.HeaderText = "DM104";
+            this.dM104DataGridViewTextBoxColumn.Name = "dM104DataGridViewTextBoxColumn";
+            this.dM104DataGridViewTextBoxColumn.ReadOnly = true;
+            this.dM104DataGridViewTextBoxColumn.Width = 74;
+            // 
+            // dM103DataGridViewTextBoxColumn
+            // 
+            this.dM103DataGridViewTextBoxColumn.DataPropertyName = "DM103";
+            this.dM103DataGridViewTextBoxColumn.HeaderText = "DM103";
+            this.dM103DataGridViewTextBoxColumn.Name = "dM103DataGridViewTextBoxColumn";
+            this.dM103DataGridViewTextBoxColumn.ReadOnly = true;
+            this.dM103DataGridViewTextBoxColumn.Width = 74;
+            // 
+            // dM102DataGridViewTextBoxColumn
+            // 
+            this.dM102DataGridViewTextBoxColumn.DataPropertyName = "DM102";
+            this.dM102DataGridViewTextBoxColumn.HeaderText = "DM102";
+            this.dM102DataGridViewTextBoxColumn.Name = "dM102DataGridViewTextBoxColumn";
+            this.dM102DataGridViewTextBoxColumn.ReadOnly = true;
+            this.dM102DataGridViewTextBoxColumn.Width = 74;
+            // 
+            // dM101DataGridViewTextBoxColumn
+            // 
+            this.dM101DataGridViewTextBoxColumn.DataPropertyName = "DM101";
+            this.dM101DataGridViewTextBoxColumn.HeaderText = "DM101";
+            this.dM101DataGridViewTextBoxColumn.Name = "dM101DataGridViewTextBoxColumn";
+            this.dM101DataGridViewTextBoxColumn.ReadOnly = true;
+            this.dM101DataGridViewTextBoxColumn.Width = 74;
+            // 
+            // sMANDBEZDataGridViewTextBoxColumn
+            // 
+            this.sMANDBEZDataGridViewTextBoxColumn.DataPropertyName = "SMANDBEZ";
+            this.sMANDBEZDataGridViewTextBoxColumn.HeaderText = "SMANDBEZ";
+            this.sMANDBEZDataGridViewTextBoxColumn.Name = "sMANDBEZDataGridViewTextBoxColumn";
+            this.sMANDBEZDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sMANDBEZDataGridViewTextBoxColumn.Width = 105;
+            // 
+            // sARTIKELNRDataGridViewTextBoxColumn
+            // 
+            this.sARTIKELNRDataGridViewTextBoxColumn.DataPropertyName = "SARTIKELNR";
+            this.sARTIKELNRDataGridViewTextBoxColumn.HeaderText = "SARTIKELNR";
+            this.sARTIKELNRDataGridViewTextBoxColumn.Name = "sARTIKELNRDataGridViewTextBoxColumn";
+            this.sARTIKELNRDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sARTIKELNRDataGridViewTextBoxColumn.Width = 113;
+            // 
+            // sZEICHBEZDataGridViewTextBoxColumn
+            // 
+            this.sZEICHBEZDataGridViewTextBoxColumn.DataPropertyName = "SZEICHBEZ";
+            this.sZEICHBEZDataGridViewTextBoxColumn.HeaderText = "SZEICHBEZ";
+            this.sZEICHBEZDataGridViewTextBoxColumn.Name = "sZEICHBEZDataGridViewTextBoxColumn";
+            this.sZEICHBEZDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sZEICHBEZDataGridViewTextBoxColumn.Width = 104;
+            // 
+            // sPRUEFERDataGridViewTextBoxColumn
+            // 
+            this.sPRUEFERDataGridViewTextBoxColumn.DataPropertyName = "SPRUEFER";
+            this.sPRUEFERDataGridViewTextBoxColumn.HeaderText = "SPRUEFER";
+            this.sPRUEFERDataGridViewTextBoxColumn.Name = "sPRUEFERDataGridViewTextBoxColumn";
+            this.sPRUEFERDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sPRUEFERDataGridViewTextBoxColumn.Width = 104;
+            // 
+            // sFABEZDataGridViewTextBoxColumn
+            // 
+            this.sFABEZDataGridViewTextBoxColumn.DataPropertyName = "SFABEZ";
+            this.sFABEZDataGridViewTextBoxColumn.HeaderText = "SFABEZ";
+            this.sFABEZDataGridViewTextBoxColumn.Name = "sFABEZDataGridViewTextBoxColumn";
+            this.sFABEZDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sFABEZDataGridViewTextBoxColumn.Width = 83;
+            // 
+            // sPTSERIALDataGridViewTextBoxColumn
+            // 
+            this.sPTSERIALDataGridViewTextBoxColumn.DataPropertyName = "SPTSERIAL";
+            this.sPTSERIALDataGridViewTextBoxColumn.HeaderText = "SPTSERIAL";
+            this.sPTSERIALDataGridViewTextBoxColumn.Name = "sPTSERIALDataGridViewTextBoxColumn";
+            this.sPTSERIALDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sPTSERIALDataGridViewTextBoxColumn.Width = 104;
+            // 
+            // sDTSERIALDataGridViewTextBoxColumn
+            // 
+            this.sDTSERIALDataGridViewTextBoxColumn.DataPropertyName = "SDTSERIAL";
+            this.sDTSERIALDataGridViewTextBoxColumn.HeaderText = "SDTSERIAL";
+            this.sDTSERIALDataGridViewTextBoxColumn.Name = "sDTSERIALDataGridViewTextBoxColumn";
+            this.sDTSERIALDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sDTSERIALDataGridViewTextBoxColumn.Width = 104;
+            // 
+            // sZUSINFO20DataGridViewTextBoxColumn
+            // 
+            this.sZUSINFO20DataGridViewTextBoxColumn.DataPropertyName = "SZUSINFO20";
+            this.sZUSINFO20DataGridViewTextBoxColumn.HeaderText = "SZUSINFO20";
+            this.sZUSINFO20DataGridViewTextBoxColumn.Name = "sZUSINFO20DataGridViewTextBoxColumn";
+            this.sZUSINFO20DataGridViewTextBoxColumn.ReadOnly = true;
+            this.sZUSINFO20DataGridViewTextBoxColumn.Width = 111;
+            // 
+            // dTLAENDERUNGDataGridViewTextBoxColumn
+            // 
+            this.dTLAENDERUNGDataGridViewTextBoxColumn.DataPropertyName = "DTLAENDERUNG";
+            this.dTLAENDERUNGDataGridViewTextBoxColumn.HeaderText = "Letzte geändert am";
+            this.dTLAENDERUNGDataGridViewTextBoxColumn.Name = "dTLAENDERUNGDataGridViewTextBoxColumn";
+            this.dTLAENDERUNGDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dTLAENDERUNGDataGridViewTextBoxColumn.Width = 116;
+            // 
+            // sPANRDataGridViewTextBoxColumn
+            // 
+            this.sPANRDataGridViewTextBoxColumn.DataPropertyName = "SPANR";
+            this.sPANRDataGridViewTextBoxColumn.HeaderText = "Rückmeldenummer";
+            this.sPANRDataGridViewTextBoxColumn.Name = "sPANRDataGridViewTextBoxColumn";
+            this.sPANRDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sPANRDataGridViewTextBoxColumn.Width = 145;
+            // 
+            // qsystestwefa1405DataSet
+            // 
+            this.qsystestwefa1405DataSet.DataSetName = "qsystestwefa1405DataSet";
+            this.qsystestwefa1405DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mAiTMMMITTELSTANDBindingSource1
+            // 
+            this.mAiTMMMITTELSTANDBindingSource1.DataMember = "_MAiT_MM_MITTELSTAND";
+            this.mAiTMMMITTELSTANDBindingSource1.DataSource = this.qsystestwefa1405DataSet;
+            // 
+            // _MAiT_MM_MITTELSTANDTableAdapter3
+            // 
+            this._MAiT_MM_MITTELSTANDTableAdapter3.ClearBeforeFill = true;
+            // 
+            // NLFDAUFTRAGID
+            // 
+            this.NLFDAUFTRAGID.DataPropertyName = "NLFDAUFTRAGID";
+            this.NLFDAUFTRAGID.HeaderText = "NLFDAUFTRAGID";
+            this.NLFDAUFTRAGID.Name = "NLFDAUFTRAGID";
+            this.NLFDAUFTRAGID.ReadOnly = true;
+            this.NLFDAUFTRAGID.Width = 139;
+            // 
+            // qsystestwefa1405DataSet1
+            // 
+            this.qsystestwefa1405DataSet1.DataSetName = "qsystestwefa1405DataSet1";
+            this.qsystestwefa1405DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mAiTMM2DBMITTELSTANDBindingSource1
+            // 
+            this.mAiTMM2DBMITTELSTANDBindingSource1.DataMember = "_MAiT_MM_2DB_MITTELSTAND";
+            this.mAiTMM2DBMITTELSTANDBindingSource1.DataSource = this.qsystestwefa1405DataSet1;
+            // 
+            // _MAiT_MM_2DB_MITTELSTANDTableAdapter1
+            // 
+            this._MAiT_MM_2DB_MITTELSTANDTableAdapter1.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4096,6 +4163,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.mAiTMM2DBMITTELSTANDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wefaDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mMMITTELSTANDCKBindingSource)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.qsystestwefa1405DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mAiTMMMITTELSTANDBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qsystestwefa1405DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mAiTMM2DBMITTELSTANDBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4380,35 +4452,6 @@
         private wefaDataSet2 wefaDataSet2;
         private System.Windows.Forms.BindingSource mAiTMM2DBMITTELSTANDBindingSource;
         private wefaDataSet2TableAdapters._MAiT_MM_2DB_MITTELSTANDTableAdapter _MAiT_MM_2DB_MITTELSTANDTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sPANRDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dTLAENDERUNGDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sZUSINFO20DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sDTSERIALDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sPTSERIALDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sFABEZDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sPRUEFERDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sZEICHBEZDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sARTIKELNRDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sMANDBEZDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dM101DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dM102DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dM103DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dM104DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dM105DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dM106DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dM9RMINDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dM9RMAXDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dM9RAUSSENDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dSM101DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dSM102DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dSM103DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dSM104DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dSM105DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dSM106DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dSM9RMINDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dSM9RMAXDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dSM9RAUSSENDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dMMANZAHLDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sPANRDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dTLAENDERUNGDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn sZUSINFO20DataGridViewTextBoxColumn1;
@@ -4458,6 +4501,44 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dD2SM9RAUSSENDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dMMANZAHLDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dSM1221DataGridViewTextBoxColumn;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem löschenToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sPANRDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dTLAENDERUNGDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sZUSINFO20DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sDTSERIALDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sPTSERIALDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sFABEZDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sPRUEFERDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sZEICHBEZDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sARTIKELNRDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sMANDBEZDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dM101DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dM102DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dM103DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dM104DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dM105DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dM106DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dM9RMINDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dM9RMAXDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dM9RAUSSENDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dSM101DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dSM102DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dSM103DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dSM104DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dSM105DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dSM106DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dSM9RMINDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dSM9RMAXDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dSM9RAUSSENDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dMMANZAHLDataGridViewTextBoxColumn;
+        private qsystestwefa1405DataSet qsystestwefa1405DataSet;
+        private System.Windows.Forms.BindingSource mAiTMMMITTELSTANDBindingSource1;
+        private qsystestwefa1405DataSetTableAdapters._MAiT_MM_MITTELSTANDTableAdapter _MAiT_MM_MITTELSTANDTableAdapter3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NLFDAUFTRAGID;
+        private qsystestwefa1405DataSet1 qsystestwefa1405DataSet1;
+        private System.Windows.Forms.BindingSource mAiTMM2DBMITTELSTANDBindingSource1;
+        private qsystestwefa1405DataSet1TableAdapters._MAiT_MM_2DB_MITTELSTANDTableAdapter _MAiT_MM_2DB_MITTELSTANDTableAdapter1;
     }
 }
 
