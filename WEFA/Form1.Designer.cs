@@ -113,7 +113,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
- 
             this.label27 = new System.Windows.Forms.Label();
             this.tB_m9ra = new System.Windows.Forms.TextBox();
             this.tB_m9rmax = new System.Windows.Forms.TextBox();
@@ -1306,7 +1305,6 @@
             // 
             // panel7
             // 
-
             this.panel7.Controls.Add(this.label27);
             this.panel7.Controls.Add(this.tB_m9ra);
             this.panel7.Controls.Add(this.tB_m9rmax);
@@ -1324,7 +1322,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(531, 276);
             this.panel7.TabIndex = 3;
-
             // 
             // label27
             // 
@@ -1500,7 +1497,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.79607F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.82006F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 437F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 439F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -1546,67 +1543,67 @@
             this.panel22.Controls.Add(this.label71);
             this.panel22.Controls.Add(this.label72);
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel22.Location = new System.Drawing.Point(976, 491);
+            this.panel22.Location = new System.Drawing.Point(975, 491);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(433, 280);
+            this.panel22.Size = new System.Drawing.Size(434, 280);
             this.panel22.TabIndex = 49;
             // 
             // button16
             // 
-            this.button16.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button16.BackColor = System.Drawing.Color.Teal;
             this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button16.FlatAppearance.BorderSize = 0;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(280, 187);
+            this.button16.Location = new System.Drawing.Point(331, 187);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(93, 31);
+            this.button16.Size = new System.Drawing.Size(60, 31);
             this.button16.TabIndex = 30;
             this.button16.Text = "DBr.2";
             this.button16.UseVisualStyleBackColor = false;
             // 
             // button15
             // 
-            this.button15.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button15.BackColor = System.Drawing.Color.Teal;
             this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button15.FlatAppearance.BorderSize = 0;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(280, 122);
+            this.button15.Location = new System.Drawing.Point(331, 122);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(93, 31);
+            this.button15.Size = new System.Drawing.Size(60, 31);
             this.button15.TabIndex = 23;
             this.button15.Text = "DBr.2";
             this.button15.UseVisualStyleBackColor = false;
             // 
             // button14
             // 
-            this.button14.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button14.BackColor = System.Drawing.Color.Teal;
             this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button14.FlatAppearance.BorderSize = 0;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(64, 189);
+            this.button14.Location = new System.Drawing.Point(110, 189);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(93, 31);
+            this.button14.Size = new System.Drawing.Size(64, 31);
             this.button14.TabIndex = 29;
             this.button14.Text = "DBr.1";
             this.button14.UseVisualStyleBackColor = false;
             // 
             // button9
             // 
-            this.button9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button9.BackColor = System.Drawing.Color.Teal;
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(64, 122);
+            this.button9.Location = new System.Drawing.Point(110, 122);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(93, 31);
+            this.button9.Size = new System.Drawing.Size(64, 31);
             this.button9.TabIndex = 23;
             this.button9.Text = "DBr.1";
             this.button9.UseVisualStyleBackColor = false;
@@ -1615,7 +1612,7 @@
             // 
             this.tB2d1_m9ra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d1_m9ra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d1_m9ra.Location = new System.Drawing.Point(75, 224);
+            this.tB2d1_m9ra.Location = new System.Drawing.Point(76, 224);
             this.tB2d1_m9ra.Name = "tB2d1_m9ra";
             this.tB2d1_m9ra.Size = new System.Drawing.Size(126, 24);
             this.tB2d1_m9ra.TabIndex = 2;
@@ -1624,7 +1621,7 @@
             // 
             this.tB2d1_m9rmax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d1_m9rmax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d1_m9rmax.Location = new System.Drawing.Point(75, 159);
+            this.tB2d1_m9rmax.Location = new System.Drawing.Point(76, 159);
             this.tB2d1_m9rmax.Name = "tB2d1_m9rmax";
             this.tB2d1_m9rmax.Size = new System.Drawing.Size(126, 24);
             this.tB2d1_m9rmax.TabIndex = 1;
@@ -1633,7 +1630,7 @@
             // 
             this.tB2d1_m9rmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d1_m9rmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d1_m9rmin.Location = new System.Drawing.Point(75, 93);
+            this.tB2d1_m9rmin.Location = new System.Drawing.Point(76, 93);
             this.tB2d1_m9rmin.Name = "tB2d1_m9rmin";
             this.tB2d1_m9rmin.Size = new System.Drawing.Size(126, 24);
             this.tB2d1_m9rmin.TabIndex = 0;
@@ -1643,7 +1640,7 @@
             this.label69.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(70, 52);
+            this.label69.Location = new System.Drawing.Point(71, 52);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(77, 16);
             this.label69.TabIndex = 0;
@@ -1653,7 +1650,7 @@
             // 
             this.tB2d2_m9ra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d2_m9ra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d2_m9ra.Location = new System.Drawing.Point(292, 224);
+            this.tB2d2_m9ra.Location = new System.Drawing.Point(293, 224);
             this.tB2d2_m9ra.Name = "tB2d2_m9ra";
             this.tB2d2_m9ra.Size = new System.Drawing.Size(126, 24);
             this.tB2d2_m9ra.TabIndex = 5;
@@ -1662,7 +1659,7 @@
             // 
             this.tB2d2_m9rmax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d2_m9rmax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d2_m9rmax.Location = new System.Drawing.Point(292, 159);
+            this.tB2d2_m9rmax.Location = new System.Drawing.Point(293, 159);
             this.tB2d2_m9rmax.Name = "tB2d2_m9rmax";
             this.tB2d2_m9rmax.Size = new System.Drawing.Size(126, 24);
             this.tB2d2_m9rmax.TabIndex = 4;
@@ -1671,7 +1668,7 @@
             // 
             this.tB2d2_m9rmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d2_m9rmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d2_m9rmin.Location = new System.Drawing.Point(292, 93);
+            this.tB2d2_m9rmin.Location = new System.Drawing.Point(293, 93);
             this.tB2d2_m9rmin.Name = "tB2d2_m9rmin";
             this.tB2d2_m9rmin.Size = new System.Drawing.Size(126, 24);
             this.tB2d2_m9rmin.TabIndex = 3;
@@ -1681,7 +1678,7 @@
             this.label70.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.Location = new System.Drawing.Point(207, 229);
+            this.label70.Location = new System.Drawing.Point(208, 229);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(84, 16);
             this.label70.TabIndex = 8;
@@ -1692,7 +1689,7 @@
             this.label71.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label71.AutoSize = true;
             this.label71.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.Location = new System.Drawing.Point(213, 164);
+            this.label71.Location = new System.Drawing.Point(214, 164);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(67, 16);
             this.label71.TabIndex = 7;
@@ -1703,7 +1700,7 @@
             this.label72.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label72.AutoSize = true;
             this.label72.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.Location = new System.Drawing.Point(213, 98);
+            this.label72.Location = new System.Drawing.Point(214, 98);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(63, 16);
             this.label72.TabIndex = 6;
@@ -1715,7 +1712,7 @@
             this.panel20.Controls.Add(this.label64);
             this.panel20.Controls.Add(this.label65);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel20.Location = new System.Drawing.Point(918, 491);
+            this.panel20.Location = new System.Drawing.Point(917, 491);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(52, 280);
             this.panel20.TabIndex = 39;
@@ -1755,7 +1752,7 @@
             this.panel18.Controls.Add(this.label58);
             this.panel18.Controls.Add(this.tB2_m1221);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel18.Location = new System.Drawing.Point(441, 491);
+            this.panel18.Location = new System.Drawing.Point(440, 491);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(86, 280);
             this.panel18.TabIndex = 47;
@@ -1787,7 +1784,7 @@
             this.panel17.Controls.Add(this.label56);
             this.panel17.Controls.Add(this.label57);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(385, 491);
+            this.panel17.Location = new System.Drawing.Point(384, 491);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(50, 280);
             this.panel17.TabIndex = 38;
@@ -1850,7 +1847,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(3, 198);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(376, 287);
+            this.panel10.Size = new System.Drawing.Size(375, 287);
             this.panel10.TabIndex = 50;
             // 
             // tB2_m104ut
@@ -1875,7 +1872,7 @@
             // 
             this.tB2_m103ut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2_m103ut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2_m103ut.Location = new System.Drawing.Point(249, 247);
+            this.tB2_m103ut.Location = new System.Drawing.Point(248, 247);
             this.tB2_m103ut.Name = "tB2_m103ut";
             this.tB2_m103ut.ReadOnly = true;
             this.tB2_m103ut.Size = new System.Drawing.Size(74, 24);
@@ -1885,7 +1882,7 @@
             // 
             this.tB2_m103ot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2_m103ot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2_m103ot.Location = new System.Drawing.Point(249, 201);
+            this.tB2_m103ot.Location = new System.Drawing.Point(248, 201);
             this.tB2_m103ot.Name = "tB2_m103ot";
             this.tB2_m103ot.ReadOnly = true;
             this.tB2_m103ot.Size = new System.Drawing.Size(74, 24);
@@ -1913,7 +1910,7 @@
             // 
             this.tB2_m106ut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2_m106ut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2_m106ut.Location = new System.Drawing.Point(271, 167);
+            this.tB2_m106ut.Location = new System.Drawing.Point(270, 167);
             this.tB2_m106ut.Name = "tB2_m106ut";
             this.tB2_m106ut.ReadOnly = true;
             this.tB2_m106ut.Size = new System.Drawing.Size(74, 24);
@@ -1923,7 +1920,7 @@
             // 
             this.tB2_m106ot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2_m106ot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2_m106ot.Location = new System.Drawing.Point(271, 121);
+            this.tB2_m106ot.Location = new System.Drawing.Point(270, 121);
             this.tB2_m106ot.Name = "tB2_m106ot";
             this.tB2_m106ot.ReadOnly = true;
             this.tB2_m106ot.Size = new System.Drawing.Size(74, 24);
@@ -1933,7 +1930,7 @@
             // 
             this.tB2_m101ut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2_m101ut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2_m101ut.Location = new System.Drawing.Point(249, 85);
+            this.tB2_m101ut.Location = new System.Drawing.Point(248, 85);
             this.tB2_m101ut.Name = "tB2_m101ut";
             this.tB2_m101ut.ReadOnly = true;
             this.tB2_m101ut.Size = new System.Drawing.Size(74, 24);
@@ -1943,7 +1940,7 @@
             // 
             this.tB2_m101ot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2_m101ot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2_m101ot.Location = new System.Drawing.Point(249, 39);
+            this.tB2_m101ot.Location = new System.Drawing.Point(248, 39);
             this.tB2_m101ot.Name = "tB2_m101ot";
             this.tB2_m101ot.ReadOnly = true;
             this.tB2_m101ot.Size = new System.Drawing.Size(74, 24);
@@ -1975,9 +1972,9 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(164, 142);
+            this.button1.Location = new System.Drawing.Point(189, 142);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 31);
+            this.button1.Size = new System.Drawing.Size(52, 31);
             this.button1.TabIndex = 20;
             this.button1.Text = "DBr.1";
             this.button1.UseVisualStyleBackColor = false;
@@ -1996,7 +1993,7 @@
             // 
             this.tB2_sm103.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2_sm103.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2_sm103.Location = new System.Drawing.Point(223, 224);
+            this.tB2_sm103.Location = new System.Drawing.Point(222, 224);
             this.tB2_sm103.Name = "tB2_sm103";
             this.tB2_sm103.ReadOnly = true;
             this.tB2_sm103.Size = new System.Drawing.Size(126, 24);
@@ -2006,7 +2003,7 @@
             // 
             this.tB2_sm106.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2_sm106.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2_sm106.Location = new System.Drawing.Point(248, 144);
+            this.tB2_sm106.Location = new System.Drawing.Point(247, 144);
             this.tB2_sm106.Name = "tB2_sm106";
             this.tB2_sm106.ReadOnly = true;
             this.tB2_sm106.Size = new System.Drawing.Size(126, 24);
@@ -2016,7 +2013,7 @@
             // 
             this.tB2_sm101.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2_sm101.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2_sm101.Location = new System.Drawing.Point(223, 62);
+            this.tB2_sm101.Location = new System.Drawing.Point(222, 62);
             this.tB2_sm101.Name = "tB2_sm101";
             this.tB2_sm101.ReadOnly = true;
             this.tB2_sm101.Size = new System.Drawing.Size(126, 24);
@@ -2104,16 +2101,16 @@
             this.panel12.Controls.Add(this.label42);
             this.panel12.Controls.Add(this.label43);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(976, 198);
+            this.panel12.Location = new System.Drawing.Point(975, 198);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(433, 287);
+            this.panel12.Size = new System.Drawing.Size(434, 287);
             this.panel12.TabIndex = 53;
             // 
             // tB2d1_m9raut
             // 
             this.tB2d1_m9raut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d1_m9raut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d1_m9raut.Location = new System.Drawing.Point(99, 247);
+            this.tB2d1_m9raut.Location = new System.Drawing.Point(100, 247);
             this.tB2d1_m9raut.Name = "tB2d1_m9raut";
             this.tB2d1_m9raut.ReadOnly = true;
             this.tB2d1_m9raut.Size = new System.Drawing.Size(74, 24);
@@ -2123,7 +2120,7 @@
             // 
             this.tB2d1_m9raot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d1_m9raot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d1_m9raot.Location = new System.Drawing.Point(99, 201);
+            this.tB2d1_m9raot.Location = new System.Drawing.Point(100, 201);
             this.tB2d1_m9raot.Name = "tB2d1_m9raot";
             this.tB2d1_m9raot.ReadOnly = true;
             this.tB2d1_m9raot.Size = new System.Drawing.Size(74, 24);
@@ -2133,7 +2130,7 @@
             // 
             this.tB2d1_m9rmaxut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d1_m9rmaxut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d1_m9rmaxut.Location = new System.Drawing.Point(99, 167);
+            this.tB2d1_m9rmaxut.Location = new System.Drawing.Point(100, 167);
             this.tB2d1_m9rmaxut.Name = "tB2d1_m9rmaxut";
             this.tB2d1_m9rmaxut.ReadOnly = true;
             this.tB2d1_m9rmaxut.Size = new System.Drawing.Size(74, 24);
@@ -2143,7 +2140,7 @@
             // 
             this.tB2d1_m9rmaxot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d1_m9rmaxot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d1_m9rmaxot.Location = new System.Drawing.Point(99, 121);
+            this.tB2d1_m9rmaxot.Location = new System.Drawing.Point(100, 121);
             this.tB2d1_m9rmaxot.Name = "tB2d1_m9rmaxot";
             this.tB2d1_m9rmaxot.ReadOnly = true;
             this.tB2d1_m9rmaxot.Size = new System.Drawing.Size(74, 24);
@@ -2153,7 +2150,7 @@
             // 
             this.tB2d1_m9rminot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d1_m9rminot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d1_m9rminot.Location = new System.Drawing.Point(99, 39);
+            this.tB2d1_m9rminot.Location = new System.Drawing.Point(100, 39);
             this.tB2d1_m9rminot.Name = "tB2d1_m9rminot";
             this.tB2d1_m9rminot.ReadOnly = true;
             this.tB2d1_m9rminot.Size = new System.Drawing.Size(74, 24);
@@ -2163,7 +2160,7 @@
             // 
             this.tB2d1_m9rminut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d1_m9rminut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d1_m9rminut.Location = new System.Drawing.Point(99, 85);
+            this.tB2d1_m9rminut.Location = new System.Drawing.Point(100, 85);
             this.tB2d1_m9rminut.Name = "tB2d1_m9rminut";
             this.tB2d1_m9rminut.ReadOnly = true;
             this.tB2d1_m9rminut.Size = new System.Drawing.Size(74, 24);
@@ -2173,7 +2170,7 @@
             // 
             this.tB2d1_sm9ra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d1_sm9ra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d1_sm9ra.Location = new System.Drawing.Point(75, 224);
+            this.tB2d1_sm9ra.Location = new System.Drawing.Point(76, 224);
             this.tB2d1_sm9ra.Name = "tB2d1_sm9ra";
             this.tB2d1_sm9ra.ReadOnly = true;
             this.tB2d1_sm9ra.Size = new System.Drawing.Size(126, 24);
@@ -2183,7 +2180,7 @@
             // 
             this.tB2d1_sm9rmax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d1_sm9rmax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d1_sm9rmax.Location = new System.Drawing.Point(75, 144);
+            this.tB2d1_sm9rmax.Location = new System.Drawing.Point(76, 144);
             this.tB2d1_sm9rmax.Name = "tB2d1_sm9rmax";
             this.tB2d1_sm9rmax.ReadOnly = true;
             this.tB2d1_sm9rmax.Size = new System.Drawing.Size(126, 24);
@@ -2193,7 +2190,7 @@
             // 
             this.tB2d1_sm9rmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d1_sm9rmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d1_sm9rmin.Location = new System.Drawing.Point(75, 62);
+            this.tB2d1_sm9rmin.Location = new System.Drawing.Point(76, 62);
             this.tB2d1_sm9rmin.Name = "tB2d1_sm9rmin";
             this.tB2d1_sm9rmin.ReadOnly = true;
             this.tB2d1_sm9rmin.Size = new System.Drawing.Size(126, 24);
@@ -2203,7 +2200,7 @@
             // 
             this.tB2d2_m9raut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d2_m9raut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d2_m9raut.Location = new System.Drawing.Point(316, 247);
+            this.tB2d2_m9raut.Location = new System.Drawing.Point(317, 247);
             this.tB2d2_m9raut.Name = "tB2d2_m9raut";
             this.tB2d2_m9raut.ReadOnly = true;
             this.tB2d2_m9raut.Size = new System.Drawing.Size(74, 24);
@@ -2213,7 +2210,7 @@
             // 
             this.tB2d2_m9raot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d2_m9raot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d2_m9raot.Location = new System.Drawing.Point(316, 201);
+            this.tB2d2_m9raot.Location = new System.Drawing.Point(317, 201);
             this.tB2d2_m9raot.Name = "tB2d2_m9raot";
             this.tB2d2_m9raot.ReadOnly = true;
             this.tB2d2_m9raot.Size = new System.Drawing.Size(74, 24);
@@ -2223,7 +2220,7 @@
             // 
             this.tB2d2_m9rmaxut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d2_m9rmaxut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d2_m9rmaxut.Location = new System.Drawing.Point(316, 167);
+            this.tB2d2_m9rmaxut.Location = new System.Drawing.Point(317, 167);
             this.tB2d2_m9rmaxut.Name = "tB2d2_m9rmaxut";
             this.tB2d2_m9rmaxut.ReadOnly = true;
             this.tB2d2_m9rmaxut.Size = new System.Drawing.Size(74, 24);
@@ -2233,7 +2230,7 @@
             // 
             this.tB2d2_m9rmaxot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d2_m9rmaxot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d2_m9rmaxot.Location = new System.Drawing.Point(316, 121);
+            this.tB2d2_m9rmaxot.Location = new System.Drawing.Point(317, 121);
             this.tB2d2_m9rmaxot.Name = "tB2d2_m9rmaxot";
             this.tB2d2_m9rmaxot.ReadOnly = true;
             this.tB2d2_m9rmaxot.Size = new System.Drawing.Size(74, 24);
@@ -2243,7 +2240,7 @@
             // 
             this.tB2d2_m9rminot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d2_m9rminot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d2_m9rminot.Location = new System.Drawing.Point(316, 39);
+            this.tB2d2_m9rminot.Location = new System.Drawing.Point(317, 39);
             this.tB2d2_m9rminot.Name = "tB2d2_m9rminot";
             this.tB2d2_m9rminot.ReadOnly = true;
             this.tB2d2_m9rminot.Size = new System.Drawing.Size(74, 24);
@@ -2253,7 +2250,7 @@
             // 
             this.tB2d2_m9rminut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d2_m9rminut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d2_m9rminut.Location = new System.Drawing.Point(316, 85);
+            this.tB2d2_m9rminut.Location = new System.Drawing.Point(317, 85);
             this.tB2d2_m9rminut.Name = "tB2d2_m9rminut";
             this.tB2d2_m9rminut.ReadOnly = true;
             this.tB2d2_m9rminut.Size = new System.Drawing.Size(74, 24);
@@ -2264,7 +2261,7 @@
             this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(72, 10);
+            this.label40.Location = new System.Drawing.Point(73, 10);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(142, 16);
             this.label40.TabIndex = 19;
@@ -2274,7 +2271,7 @@
             // 
             this.tB2d2_sm9ra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d2_sm9ra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d2_sm9ra.Location = new System.Drawing.Point(292, 224);
+            this.tB2d2_sm9ra.Location = new System.Drawing.Point(293, 224);
             this.tB2d2_sm9ra.Name = "tB2d2_sm9ra";
             this.tB2d2_sm9ra.ReadOnly = true;
             this.tB2d2_sm9ra.Size = new System.Drawing.Size(126, 24);
@@ -2284,7 +2281,7 @@
             // 
             this.tB2d2_sm9rmax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d2_sm9rmax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d2_sm9rmax.Location = new System.Drawing.Point(292, 144);
+            this.tB2d2_sm9rmax.Location = new System.Drawing.Point(293, 144);
             this.tB2d2_sm9rmax.Name = "tB2d2_sm9rmax";
             this.tB2d2_sm9rmax.ReadOnly = true;
             this.tB2d2_sm9rmax.Size = new System.Drawing.Size(126, 24);
@@ -2294,7 +2291,7 @@
             // 
             this.tB2d2_sm9rmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2d2_sm9rmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2d2_sm9rmin.Location = new System.Drawing.Point(292, 62);
+            this.tB2d2_sm9rmin.Location = new System.Drawing.Point(293, 62);
             this.tB2d2_sm9rmin.Name = "tB2d2_sm9rmin";
             this.tB2d2_sm9rmin.ReadOnly = true;
             this.tB2d2_sm9rmin.Size = new System.Drawing.Size(126, 24);
@@ -2305,7 +2302,7 @@
             this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(207, 229);
+            this.label41.Location = new System.Drawing.Point(208, 229);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(84, 16);
             this.label41.TabIndex = 8;
@@ -2316,7 +2313,7 @@
             this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(213, 149);
+            this.label42.Location = new System.Drawing.Point(214, 149);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(67, 16);
             this.label42.TabIndex = 7;
@@ -2327,7 +2324,7 @@
             this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(213, 67);
+            this.label43.Location = new System.Drawing.Point(214, 67);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(63, 16);
             this.label43.TabIndex = 6;
@@ -2338,7 +2335,7 @@
             this.panel13.Controls.Add(this.label44);
             this.panel13.Controls.Add(this.tB2_sm1221);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(441, 198);
+            this.panel13.Location = new System.Drawing.Point(440, 198);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(86, 287);
             this.panel13.TabIndex = 52;
@@ -2390,7 +2387,7 @@
             this.panel11.Controls.Add(this.label38);
             this.panel11.Controls.Add(this.label39);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(533, 198);
+            this.panel11.Location = new System.Drawing.Point(532, 198);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(379, 287);
             this.panel11.TabIndex = 51;
@@ -2517,9 +2514,9 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(169, 142);
+            this.button3.Location = new System.Drawing.Point(196, 142);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 31);
+            this.button3.Size = new System.Drawing.Size(49, 31);
             this.button3.TabIndex = 20;
             this.button3.Text = "DBr.2";
             this.button3.UseVisualStyleBackColor = false;
@@ -2617,7 +2614,7 @@
             this.panel14.Controls.Add(this.label48);
             this.panel14.Controls.Add(this.label49);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(385, 198);
+            this.panel14.Location = new System.Drawing.Point(384, 198);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(50, 287);
             this.panel14.TabIndex = 37;
@@ -2658,7 +2655,7 @@
             this.panel15.Controls.Add(this.label51);
             this.panel15.Controls.Add(this.label52);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(918, 198);
+            this.panel15.Location = new System.Drawing.Point(917, 198);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(52, 287);
             this.panel15.TabIndex = 38;
@@ -2711,7 +2708,7 @@
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(3, 491);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(376, 280);
+            this.panel16.Size = new System.Drawing.Size(375, 280);
             this.panel16.TabIndex = 46;
             // 
             // cB2_dfn
@@ -2719,7 +2716,7 @@
             this.cB2_dfn.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cB2_dfn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cB2_dfn.FormattingEnabled = true;
-            this.cB2_dfn.Location = new System.Drawing.Point(115, 15);
+            this.cB2_dfn.Location = new System.Drawing.Point(114, 15);
             this.cB2_dfn.Name = "cB2_dfn";
             this.cB2_dfn.Size = new System.Drawing.Size(154, 26);
             this.cB2_dfn.TabIndex = 0;
@@ -2742,9 +2739,9 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(164, 157);
+            this.button4.Location = new System.Drawing.Point(189, 157);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 31);
+            this.button4.Size = new System.Drawing.Size(52, 31);
             this.button4.TabIndex = 20;
             this.button4.Text = "DBr.1";
             this.button4.UseVisualStyleBackColor = false;
@@ -2763,7 +2760,7 @@
             // 
             this.tB2_m103.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2_m103.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2_m103.Location = new System.Drawing.Point(223, 224);
+            this.tB2_m103.Location = new System.Drawing.Point(222, 224);
             this.tB2_m103.Name = "tB2_m103";
             this.tB2_m103.Size = new System.Drawing.Size(126, 24);
             this.tB2_m103.TabIndex = 3;
@@ -2772,7 +2769,7 @@
             // 
             this.tB2_m106.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2_m106.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2_m106.Location = new System.Drawing.Point(248, 159);
+            this.tB2_m106.Location = new System.Drawing.Point(247, 159);
             this.tB2_m106.Name = "tB2_m106";
             this.tB2_m106.Size = new System.Drawing.Size(126, 24);
             this.tB2_m106.TabIndex = 6;
@@ -2781,7 +2778,7 @@
             // 
             this.tB2_m101.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tB2_m101.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB2_m101.Location = new System.Drawing.Point(223, 93);
+            this.tB2_m101.Location = new System.Drawing.Point(222, 93);
             this.tB2_m101.Name = "tB2_m101";
             this.tB2_m101.Size = new System.Drawing.Size(126, 24);
             this.tB2_m101.TabIndex = 1;
@@ -2842,7 +2839,6 @@
             // 
             // panel19
             // 
-
             this.panel19.Controls.Add(this.cB2_pfn);
             this.panel19.Controls.Add(this.label59);
             this.panel19.Controls.Add(this.button7);
@@ -2856,7 +2852,7 @@
             this.panel19.Controls.Add(this.label61);
             this.panel19.Controls.Add(this.label62);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(533, 491);
+            this.panel19.Location = new System.Drawing.Point(532, 491);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(379, 280);
             this.panel19.TabIndex = 48;
@@ -2889,9 +2885,9 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(169, 157);
+            this.button7.Location = new System.Drawing.Point(196, 157);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(93, 31);
+            this.button7.Size = new System.Drawing.Size(49, 31);
             this.button7.TabIndex = 20;
             this.button7.Text = "DBr.2";
             this.button7.UseVisualStyleBackColor = false;
@@ -2989,7 +2985,7 @@
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel21.Location = new System.Drawing.Point(3, 3);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(376, 189);
+            this.panel21.Size = new System.Drawing.Size(375, 189);
             this.panel21.TabIndex = 44;
             // 
             // button_Lupe_2
@@ -3073,7 +3069,7 @@
             this.panel23.Controls.Add(this.label74);
             this.panel23.Controls.Add(this.label75);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(533, 3);
+            this.panel23.Location = new System.Drawing.Point(532, 3);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(379, 189);
             this.panel23.TabIndex = 45;
@@ -3157,9 +3153,9 @@
             this.panel24.Controls.Add(this.button_new_entry_2);
             this.panel24.Controls.Add(this.button_new_rmn_2);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel24.Location = new System.Drawing.Point(976, 3);
+            this.panel24.Location = new System.Drawing.Point(975, 3);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(433, 189);
+            this.panel24.Size = new System.Drawing.Size(434, 189);
             this.panel24.TabIndex = 50;
             // 
             // button_save_2
@@ -3182,7 +3178,7 @@
             this.pictureBox2.Image = global::Wefa.Properties.Resources.logo;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(433, 85);
+            this.pictureBox2.Size = new System.Drawing.Size(434, 85);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;

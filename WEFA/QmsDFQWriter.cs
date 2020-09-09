@@ -13,11 +13,14 @@ using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Configuration;
+using System.Drawing.Text;
 
 namespace Wefa
 {
     class QmsDFQWriter
     {
+        private string nLfdAuftragId = "";
+
         static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder
         {
             DataSource = ConfigurationManager.AppSettings["gDataSource"],
@@ -50,8 +53,92 @@ namespace Wefa
                                           " @sm101, @sm102, @sm103, @sm104, @sm105, @sm106, @d1sm9rmin, @d1sm9rmax, @d1sm9ra, " +
                                           " @sm1011, @sm1012, @sm1013, @sm1014, @sm1015, @sm1016, @d2sm9rmin, @d2sm9rmax, @d2sm9ra, @sm1221, @mmcount )";
 
+        static readonly string sqlExistingRecords = " SELECT NLFDAUFTRAGID FROM _MAIT_MM_MITTELSTAND " +
+                                                     " WHERE SPANR = @spaNr and SDTSERIAL = @sDtSerial and SPTSERIAL = @sPtSerial and SPRUEFER = @sPruefer ";
+
+        static readonly string sqlDeleteSameRecord = " DELETE FROM _MAIT_MM_MITTELSTAND WHERE NLFDAUFTRAGID = @nLfdAuftragId ";
+
+        static readonly string sqlExistingRecords2Dbr = " SELECT NLFDAUFTRAGID FROM _MAiT_MM_2DB_MITTELSTAND " +
+                                                     " WHERE SPANR = @spaNr and SDTSERIAL = @sDtSerial and SPTSERIAL = @sPtSerial and SPRUEFER = @sPruefer ";
+
+        static readonly string sqlDeleteSameRecord2Dbr = " DELETE FROM _MAiT_MM_2DB_MITTELSTAND WHERE NLFDAUFTRAGID = @nLfdAuftragId ";
+
+        internal static void DeleteRecord(decimal nLfdAuftragId, string sql_1_2_Dbr)
+        {
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                SqlCommand command = new SqlCommand(sql_1_2_Dbr, connection);
+
+                command.Parameters.Add("@nLfdAuftragId", SqlDbType.Decimal);
+                command.Parameters["@nLfdAuftragId"].Value = nLfdAuftragId;
+
+                connection.Open();
+                command.ExecuteNonQuery();
+
+
+
+                connection.Close();
+            }
+        }
+        internal static decimal FindExistingRecords(string dornteil_nr, string platte_nr, string pruefauftrag_nr, string pruefer, string sql_1_2_Dbr)
+        {
+            decimal nLfdAuftragId = 0; 
+
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                SqlCommand command = new SqlCommand(sql_1_2_Dbr, connection);
+                
+                
+                command.Parameters.Add("@spaNr", SqlDbType.NVarChar);
+                command.Parameters["@spaNr"].Value = pruefauftrag_nr;
+
+                command.Parameters.Add("@sDtSerial", SqlDbType.NVarChar);
+                command.Parameters["@sDtSerial"].Value = dornteil_nr;
+
+                command.Parameters.Add("@sPtSerial", SqlDbType.NVarChar);
+                command.Parameters["@sPtSerial"].Value = platte_nr;
+
+                command.Parameters.Add("@sPruefer", SqlDbType.NVarChar);
+                command.Parameters["@sPruefer"].Value = pruefer;
+
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        if (!reader.IsDBNull(0))
+                        {
+                            nLfdAuftragId = reader.GetDecimal(0);
+                        }
+                    }
+                }
+                
+                connection.Close();
+
+                return nLfdAuftragId;
+
+                
+
+            }
+            
+
+        }
+
         internal static void SaveCachetoDB(DataWriterHeader Header, DataWriterLine Line)
         {
+            string dornteil_nr = Header.k0014_folgenr1;
+            string platte_nr = Header.k0015_folgenr2;
+            string pruefauftrag_nr = Header.rueckmeldenummer;
+            string pruefer = Header.k0008_pruefer;
+
+            decimal nAuftragId = FindExistingRecords(dornteil_nr, platte_nr, pruefauftrag_nr,  pruefer, sqlExistingRecords);
+            if (nAuftragId != 0) 
+            {
+                DeleteRecord(nAuftragId, sqlDeleteSameRecord);
+            }
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
                 SqlCommand command = new SqlCommand(QmsDFQWriter.sqlCache, connection);
@@ -146,14 +233,10 @@ namespace Wefa
                 //soll
                 command.Parameters.Add("@sm9ra", SqlDbType.Decimal);
                 command.Parameters["@sm9ra"].Value = Line.sRaussen;
-                
-                
-
+                                
                 connection.Open();
 
                 command.ExecuteNonQuery();
-
-
                 
                 connection.Close();
 
@@ -162,6 +245,17 @@ namespace Wefa
 
         internal static void SaveCachetoDB2DB(DataWriterHeader Header, DataWriterLine Line)
         {
+            string dornteil_nr = Header.k0014_folgenr1;
+            string platte_nr = Header.k0015_folgenr2;
+            string pruefauftrag_nr = Header.rueckmeldenummer;
+            string pruefer = Header.k0008_pruefer;
+
+            decimal nAuftragId = FindExistingRecords(dornteil_nr, platte_nr, pruefauftrag_nr, pruefer,sqlExistingRecords2Dbr );
+            if (nAuftragId != 0)
+            {
+                DeleteRecord(nAuftragId, sqlDeleteSameRecord2Dbr);
+            }
+               
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
                 SqlCommand command = new SqlCommand(QmsDFQWriter.sql2dbrCache, connection);
@@ -273,10 +367,10 @@ namespace Wefa
                 command.Parameters["@sm1016"].Value = Line.sm106;
                 //mm
                 command.Parameters.Add("@m1221", SqlDbType.Decimal);
-                command.Parameters["@m1221"].Value = Line.m106;
+                command.Parameters["@m1221"].Value = Line.m1221;
                 //soll
                 command.Parameters.Add("@sm1221", SqlDbType.Decimal);
-                command.Parameters["@sm1221"].Value = Line.sm106;
+                command.Parameters["@sm1221"].Value = Line.sm1221;
 
 
 

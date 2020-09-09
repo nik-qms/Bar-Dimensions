@@ -17,6 +17,7 @@ namespace Wefa
 {
     public partial class Form1 : Form
     {
+        private int calls = 0;
         //Header to Write
         DataWriterHeader mainheader = new DataWriterHeader();
         //List of Lines to Write
@@ -64,6 +65,8 @@ namespace Wefa
             headerobj.k1001_werkzeugnr = tB_wzg.Text;
             headerobj.k1063_kunde = tB_k.Text;
             headerobj.k1082_mandant = tB_m.Text;
+
+
             string comma = ",";
 
             if (!string.IsNullOrWhiteSpace(tB_m101.Text))
@@ -271,15 +274,15 @@ namespace Wefa
                 foreach (DataWriterLine result in LineList)
                 {
                     
-                    string m101 = result.m101.ToString("N3", CultureInfo.InvariantCulture);                    
-                    string m102 = result.m102.ToString("N3", CultureInfo.InvariantCulture);                    
-                    string m103 = result.m103.ToString("N3", CultureInfo.InvariantCulture);                    
-                    string m104 = result.m104.ToString("N3", CultureInfo.InvariantCulture);                    
-                    string m105 = result.m105.ToString("N3", CultureInfo.InvariantCulture);                    
-                    string m106 = result.m106.ToString("N3", CultureInfo.InvariantCulture);                     
-                    string Rmin = result.Rmin.ToString("N3", CultureInfo.InvariantCulture);                   
-                    string Rmax = result.Rmax.ToString("N3", CultureInfo.InvariantCulture);                    
-                    string Raussen = result.Raussen.ToString("N3", CultureInfo.InvariantCulture);
+                    string m101 = result.m101.ToString("F4", CultureInfo.InvariantCulture);                    
+                    string m102 = result.m102.ToString("F4", CultureInfo.InvariantCulture);                    
+                    string m103 = result.m103.ToString("F4", CultureInfo.InvariantCulture);                    
+                    string m104 = result.m104.ToString("F4", CultureInfo.InvariantCulture);                    
+                    string m105 = result.m105.ToString("F4", CultureInfo.InvariantCulture);                    
+                    string m106 = result.m106.ToString("F4", CultureInfo.InvariantCulture);                     
+                    string Rmin = result.Rmin.ToString("F4", CultureInfo.InvariantCulture);                   
+                    string Rmax = result.Rmax.ToString("F4", CultureInfo.InvariantCulture);                    
+                    string Raussen = result.Raussen.ToString("F4", CultureInfo.InvariantCulture);
                     
 
 
@@ -434,10 +437,15 @@ namespace Wefa
 
                 //Form Feld Daten erfassen
                 (headerobj, lineobj) = Form1_daten_erfassen();
+                LineList.Clear();
+                LineList.Add(lineobj);
+
                 if (!string.IsNullOrWhiteSpace((headerobj.k0008_pruefer)))
                 {
                     if (headerobj.k0100_anzahlmm == 9)
                     {
+                        button_create_dfq_Click(this, new EventArgs());
+                        Button_save_Click(this, new EventArgs());
 
                         createClicks_1db++;
 
@@ -455,8 +463,7 @@ namespace Wefa
                         tB_m9rmax.Clear();
                         tB_m9ra.Clear();
 
-                        button_create_dfq_Click(this, new EventArgs());
-                        Button_save_Click(this, new EventArgs());
+                       
                     }
                     else
                     {
@@ -477,7 +484,7 @@ namespace Wefa
             this._MAiT_MM_MITTELSTANDTableAdapter2.Fill(this.wefaDataSet1._MAiT_MM_MITTELSTAND);
             this.mAiTMMMITTELSTANDBindingSource.ResetBindings(false);
             this.dataGridView1.Refresh();
-            this.dataGridView1.Parent.Refresh();
+           
         }
                     
         //Save to Cache/Historie
@@ -516,17 +523,18 @@ namespace Wefa
                         {
                             QmsDFQWriter.SaveCachetoDB(headerobj, line);
                         }
-                        //string message = "Auftrag wurde gespeichert";
-                       // MessageBox.Show(message);
-                        DialogResult result = MessageBox.Show("Aktuelle Inhalt behalten?", "Neue Auftrag", MessageBoxButtons.YesNo);
-                        if (result == DialogResult.Yes)
-                        {
-                            LineList.Clear();
-                        }
-                        if (result == DialogResult.No)
-                        {
-                            Button_new_rmn_Click(this, new EventArgs());
-                        }
+                        string message = "Auftrag wurde gespeichert";
+                        MessageBox.Show(message);
+                        LineList.Clear();
+                        //DialogResult result = MessageBox.Show("Aktuelle Inhalt behalten?", "Neue Auftrag", MessageBoxButtons.YesNo);
+                        //if (result == DialogResult.Yes)
+                        //{
+                        //    LineList.Clear();
+                        //}
+                        //if (result == DialogResult.No)
+                        //{
+                        //    Button_new_rmn_Click(this, new EventArgs());
+                        //}
 
 
 
@@ -545,19 +553,20 @@ namespace Wefa
                     {
                         QmsDFQWriter.SaveCachetoDB(headerobj, line);
                     }
-                    //string errorMessage = "Auftrag wurde gespeichert";
-                   // MessageBox.Show(errorMessage);
-                    
-                   //this._MAiT_MM_MITTELSTANDTableAdapter2.Fill(this.wefaDataSet1._MAiT_MM_MITTELSTAND);
-                    DialogResult result = MessageBox.Show("Aktuelle Inhalt behalten?", "Neue Auftrag", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.Yes)
-                    {
+                    string errorMessage = "Auftrag wurde gespeichert";
+                    MessageBox.Show(errorMessage);
 
-                    }
-                    if (result == DialogResult.No)
-                    {
-                        Button_new_rmn_Click(this, new EventArgs());
-                    }
+                    //this._MAiT_MM_MITTELSTANDTableAdapter2.Fill(this.wefaDataSet1._MAiT_MM_MITTELSTAND);
+                    //DialogResult result = MessageBox.Show("Aktuelle Inhalt behalten?", "Neue Auftrag", MessageBoxButtons.YesNo);
+                    //if (result == DialogResult.Yes)
+                    //{
+                    //
+                    //}
+                    //if (result == DialogResult.No)
+                    //{
+                    //    Button_new_rmn_Click(this, new EventArgs());
+                    //}
+                    LineList.Clear();
                                                           
                 }
             }
@@ -567,7 +576,7 @@ namespace Wefa
             this._MAiT_MM_MITTELSTANDTableAdapter2.Fill(this.wefaDataSet1._MAiT_MM_MITTELSTAND);
             this.mAiTMMMITTELSTANDBindingSource.ResetBindings(false);
             this.dataGridView1.Refresh();
-            this.dataGridView1.Parent.Refresh();
+            
 
         }
 
@@ -1000,25 +1009,25 @@ namespace Wefa
 
                 foreach (DataWriterLine result in LineList)
                 {
-                    string formatted = result.m101.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                            result.m102.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                result.m103.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                    result.m104.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                        result.m105.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                            result.m106.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                                result.Rmin.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                                    result.Rmax.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                                        result.Raussen.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                                            result.m1221.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                                               result.m1011.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                                                 result.m1012.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                                                     result.m1013.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                                                         result.m1014.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                                                             result.m1015.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                                                                 result.m1016.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                                                                    result.Rmin2.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                                                                        result.Rmax2.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
-                                                                                                            result.Raussen2.ToString("N3", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F";
+                    string formatted = result.m101.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                            result.m102.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                result.m103.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                    result.m104.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                        result.m105.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                            result.m106.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                                result.Rmin.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                                    result.Rmax.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                                        result.Raussen.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                                            result.m1221.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                                               result.m1011.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                                                 result.m1012.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                                                     result.m1013.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                                                         result.m1014.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                                                             result.m1015.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                                                                 result.m1016.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                                                                    result.Rmin2.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                                                                        result.Rmax2.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F" +
+                                                                                                            result.Raussen2.ToString("F4", CultureInfo.InvariantCulture) + "\u00140\u0014" + datenow + "/" + timenow + "\u000F";
 
                     newLines.Add(formatted);
                 }
@@ -1030,7 +1039,7 @@ namespace Wefa
             }
             else
             {
-                MessageBox.Show("Keine Messwerte vorhanden.");
+                //MessageBox.Show("Keine Messwerte vorhanden.");
             }
 
         }
@@ -1075,123 +1084,123 @@ namespace Wefa
                         {
                             //Search for Mandant
                             mandant = result.mandant.ToString();
-                            tB2_sm101.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2_m101ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2_m101ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2_sm101.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2_m101ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2_m101ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
 
                         else if (result.mmBez.Equals("M10_2"))
                         {
-                            tB2_m102ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2_m102ut.Text = result.untertol.ToString("N3").Replace(".", ",");
-                            tB2_sm102.Text = result.sollMass.ToString("N3").Replace(".", ",");
+                            tB2_m102ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2_m102ut.Text = result.untertol.ToString("F4").Replace(".", ",");
+                            tB2_sm102.Text = result.sollMass.ToString("F4").Replace(".", ",");
                         }
 
                         else if (result.mmBez.Equals("M10_3"))
                         {
-                            tB2_sm103.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2_m103ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2_m103ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2_sm103.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2_m103ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2_m103ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M10_4"))
                         {
-                            tB2_sm104.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2_m104ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2_m104ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2_sm104.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2_m104ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2_m104ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M10_5"))
                         {
-                            tB2_sm105.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2_m105ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2_m105ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2_sm105.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2_m105ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2_m105ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M10_6"))
                         {
-                            tB2_sm106.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2_m106ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2_m106ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2_sm106.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2_m106ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2_m106ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         
                         else if (result.mmBez.Equals("M10_11"))
                         {
                             
-                            tB2_sm1011.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2_m1011ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2_m1011ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2_sm1011.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2_m1011ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2_m1011ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
 
                         else if (result.mmBez.Equals("M10_12"))
                         {
-                            tB2_m1012ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2_m1012ut.Text = result.untertol.ToString("N3").Replace(".", ",");
-                            tB2_sm1012.Text = result.sollMass.ToString("N3").Replace(".", ",");
+                            tB2_m1012ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2_m1012ut.Text = result.untertol.ToString("F4").Replace(".", ",");
+                            tB2_sm1012.Text = result.sollMass.ToString("F4").Replace(".", ",");
                         }
 
                         else if (result.mmBez.Equals("M10_13"))
                         {
-                            tB2_sm1013.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2_m1013ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2_m1013ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2_sm1013.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2_m1013ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2_m1013ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M10_14"))
                         {
-                            tB2_sm1014.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2_m1014ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2_m1014ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2_sm1014.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2_m1014ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2_m1014ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M10_15"))
                         {
-                            tB2_sm1015.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2_m1015ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2_m1015ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2_sm1015.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2_m1015ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2_m1015ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M10_16"))
                         {
-                            tB2_sm1016.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2_m1016ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2_m1016ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2_sm1016.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2_m1016ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2_m1016ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M9_Rmin1"))
                         {
-                            tB2d1_sm9rmin.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2d1_m9rminot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2d1_m9rminut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2d1_sm9rmin.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2d1_m9rminot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2d1_m9rminut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M9_Rmax1"))
                         {
-                            tB2d1_sm9rmax.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2d1_m9rmaxot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2d1_m9rmaxut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2d1_sm9rmax.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2d1_m9rmaxot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2d1_m9rmaxut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M9_Raussen1"))
                         {
-                            tB2d1_sm9ra.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2d1_m9raot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2d1_m9raut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2d1_sm9ra.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2d1_m9raot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2d1_m9raut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M9_Rmin2"))
                         {
-                            tB2d2_sm9rmin.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2d2_m9rminot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2d2_m9rminut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2d2_sm9rmin.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2d2_m9rminot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2d2_m9rminut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M9_Rmax2"))
                         {
-                            tB2d2_sm9rmax.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2d2_m9rmaxot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2d2_m9rmaxut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2d2_sm9rmax.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2d2_m9rmaxot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2d2_m9rmaxut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M9_Raussen2"))
                         {
-                            tB2d2_sm9ra.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2d2_m9raot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2d2_m9raut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2d2_sm9ra.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2d2_m9raot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2d2_m9raut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M12_21"))
                         {
-                            tB2d2_sm9ra.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB2d2_m9raot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB2d2_m9raut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB2d2_sm9ra.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB2d2_m9raot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB2d2_m9raut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         
                         tB2_zn.Text = result.zeichnungsNummer;
@@ -1411,6 +1420,10 @@ namespace Wefa
                         LineList.Clear();
                         LineList.Add(lineobj);
 
+
+                        button_create_dfq_2_Click(this, new EventArgs());
+                        Button_save_2_Click(this, new EventArgs());
+
                         tB2_m101.Clear();
                         tB2_m102.Clear();
                         tB2_m103.Clear();
@@ -1431,8 +1444,7 @@ namespace Wefa
                         tB2d2_m9rmax.Clear();
                         tB2d2_m9ra.Clear();
 
-                        button_create_dfq_2_Click(this, new EventArgs());
-                        Button_save_2_Click(this, new EventArgs());
+                      
                     }
                     else
                     {
@@ -1461,6 +1473,7 @@ namespace Wefa
         private void Button_save_2_Click(object sender, EventArgs e)
         {
             save = true;
+
             if (string.IsNullOrWhiteSpace(tB2_rmn.Text))
             {
                 string errorMessage = "Bitte tragen eine Rückmeldenummer ein";
@@ -1468,56 +1481,36 @@ namespace Wefa
             }
             else
             {
+                int dataLines = LineList.Count();
+
                 //Are there any existing Data Sätze?
-                if (!LineList.Any())
+                if (dataLines == 0)
                 {
-                    string errorMessage = "Da sind keine Datensätze zu speichern";
-                    MessageBox.Show(errorMessage);
 
-                    DialogResult dialogResult = MessageBox.Show("Sollen die eingegebenen Werte mit übernommen werden?", "Zwischenstand wird gespeichert", MessageBoxButtons.YesNo);
-                    if (dialogResult == DialogResult.Yes)
+                    DataWriterLine lineobj = new DataWriterLine();
+
+                    DataWriterHeader headerobj = new DataWriterHeader();
+
+                    (headerobj, lineobj) = Form12_daten_erfassen();
+
+                    // button_new_entry_2_Click(this, new EventArgs());
+                    LineList.Add(lineobj);
+
+                    if (headerobj.k0100_anzahlmm == 0)
                     {
-                    
-
-                        DataWriterLine lineobj = new DataWriterLine();
-
-                        DataWriterHeader headerobj = new DataWriterHeader();
-
-                        (headerobj, lineobj) = Form12_daten_erfassen();
-
-                        // button_new_entry_2_Click(this, new EventArgs());
-                        LineList.Add(lineobj);
-
-                        if (headerobj.k0100_anzahlmm == 0)
-                        {
-                            //
-                        }
-                        //At least 1 measurement entered
-                        else
-                        {
-                            foreach (DataWriterLine line in LineList)
-                            {
-                                QmsDFQWriter.SaveCachetoDB2DB(headerobj, line);
-                            }
-                            DialogResult result = MessageBox.Show("Inhalt behalten?", "Neue Auftrag", MessageBoxButtons.YesNo);
-                            if (result == DialogResult.Yes)
-                            {
-
-                            }
-                            if (result == DialogResult.No)
-                            {
-                                Button_new_rmn_2_Click(this, new EventArgs());
-                            }
-                            
-                            
-                            string message = "Auftrag wurde gespeichert";
-                            MessageBox.Show(message);
-                        }
+                        //
                     }
-                    //Record current entry . Choice NO.
-                    else if (dialogResult == DialogResult.No)
+                    //At least 1 measurement entered
+                    else
                     {
-                        //Do nothing
+                        foreach (DataWriterLine line in LineList)
+                        {
+                            QmsDFQWriter.SaveCachetoDB2DB(headerobj, line);
+                        }                       
+
+
+                        string message = "Auftrag wurde gespeichert";
+                        MessageBox.Show(message);
                     }
                 }
                 else
@@ -1533,16 +1526,7 @@ namespace Wefa
                         QmsDFQWriter.SaveCachetoDB2DB(headerobj, line);
                     }
                     string errorMessage = "Auftrag wurde gespeichert";
-                    MessageBox.Show(errorMessage);
-                    DialogResult result = MessageBox.Show("Aktuelle Inhalt behalten?", "Neue Auftrag", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.Yes)
-                    {
-
-                    }
-                    if (result == DialogResult.No)
-                    {
-                        Button_new_rmn_2_Click(this, new EventArgs());
-                    }
+                    MessageBox.Show(errorMessage);                    
                     
                     
                 }
@@ -1593,60 +1577,60 @@ namespace Wefa
                         {
                             //Search for Mandant
                             mandant = result.mandant.ToString();
-                            tB_sm101.Text = result.sollMass.ToString("N3").Replace(".", ",");                            
-                            tB_m101ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB_m101ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB_sm101.Text = result.sollMass.ToString("F4").Replace(".", ",");                            
+                            tB_m101ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB_m101ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
 
                         else if (result.mmBez.Equals("M10_2"))
                         {
-                            tB_m102ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB_m102ut.Text = result.untertol.ToString("N3").Replace(".", ",");
-                            tB_sm102.Text = result.sollMass.ToString("N3").Replace(".", ",");
+                            tB_m102ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB_m102ut.Text = result.untertol.ToString("F4").Replace(".", ",");
+                            tB_sm102.Text = result.sollMass.ToString("F4").Replace(".", ",");
                         }
 
                         else if (result.mmBez.Equals("M10_3"))
                         {
-                            tB_sm103.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB_sm103.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB_m103ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB_m103ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB_sm103.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB_sm103.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB_m103ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB_m103ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M10_4"))
                         {
-                            tB_sm104.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB_m104ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB_m104ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB_sm104.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB_m104ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB_m104ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M10_5"))
                         {
-                            tB_sm105.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB_m105ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB_m105ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB_sm105.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB_m105ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB_m105ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M10_6"))
                         {
-                            tB_sm106.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB_m106ot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB_m106ut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB_sm106.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB_m106ot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB_m106ut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M9_Rmin"))
                         {
-                            tB_sm9rmin.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB_m9rminot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB_m9rminut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB_sm9rmin.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB_m9rminot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB_m9rminut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M9_Rmax"))
                         {
-                            tB_sm9rmax.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB_m9rmaxot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB_m9rmaxut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB_sm9rmax.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB_m9rmaxot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB_m9rmaxut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         else if (result.mmBez.Equals("M9_Raussen"))
                         {
-                            tB_sm9ra.Text = result.sollMass.ToString("N3").Replace(".", ",");
-                            tB_m9raot.Text = result.obertol.ToString("N3").Replace(".", ",");
-                            tB_m9raut.Text = result.untertol.ToString("N3").Replace(".", ",");
+                            tB_sm9ra.Text = result.sollMass.ToString("F4").Replace(".", ",");
+                            tB_m9raot.Text = result.obertol.ToString("F4").Replace(".", ",");
+                            tB_m9raut.Text = result.untertol.ToString("F4").Replace(".", ",");
                         }
                         
                         tB_zn.Text = result.zeichnungsNummer;
@@ -1725,7 +1709,7 @@ namespace Wefa
                 }
                 else
                 {
-                    this.tabControl1.SelectedTab = this.tabPage2;
+                    this.tabControl1.SelectedTab = this.tabPage3;
                     button_Lupe_2_Click(this, new EventArgs());
 
                   decimal m101  = decimal.Parse(row.Cells[10].Value.ToString());
@@ -1747,25 +1731,25 @@ namespace Wefa
                   decimal d2m9rmin = decimal.Parse(row.Cells[26].Value.ToString());
                   decimal d2m9rmax = decimal.Parse(row.Cells[27].Value.ToString());
                   decimal d2m9ra = decimal.Parse(row.Cells[28].Value.ToString());
-                    tB2_m101.Text        = m101.ToString("N3");
-                    tB2_m102.Text        =  m102.ToString("N3");
-                    tB2_m103.Text        =  m103.ToString("N3");
-                    tB2_m104.Text        =  m104.ToString("N3");
-                    tB2_m105.Text        =  m105.ToString("N3");
-                    tB2_m106.Text        =  m106.ToString("N3");
-                    tB2_m1011.Text       =  m1011.ToString("N3");
-                    tB2_m1012.Text       =  m1012.ToString("N3");
-                    tB2_m1013.Text       =  m1013.ToString("N3");
-                    tB2_m1014.Text       =  m1014.ToString("N3");
-                    tB2_m1015.Text       =  m1015.ToString("N3");
-                    tB2_m1016.Text       =  m1016.ToString("N3");
-                    tB2_m1221.Text       = m1221.ToString("N3");
-                    tB2d1_m9rmin.Text    = d1m9rmin.ToString("N3");
-                    tB2d1_m9rmax.Text    = d1m9rmax.ToString("N3");
-                    tB2d1_m9ra.Text      = d1m9ra.ToString("N3");
-                    tB2d2_m9rmin.Text    = d2m9rmin.ToString("N3");
-                    tB2d2_m9rmax.Text    = d2m9rmax.ToString("N3");
-                    tB2d2_m9ra.Text = d2m9ra.ToString("N3");
+                    tB2_m101.Text        = m101.ToString("F4");
+                    tB2_m102.Text        =  m102.ToString("F4");
+                    tB2_m103.Text        =  m103.ToString("F4");
+                    tB2_m104.Text        =  m104.ToString("F4");
+                    tB2_m105.Text        =  m105.ToString("F4");
+                    tB2_m106.Text        =  m106.ToString("F4");
+                    tB2_m1011.Text       =  m1011.ToString("F4");
+                    tB2_m1012.Text       =  m1012.ToString("F4");
+                    tB2_m1013.Text       =  m1013.ToString("F4");
+                    tB2_m1014.Text       =  m1014.ToString("F4");
+                    tB2_m1015.Text       =  m1015.ToString("F4");
+                    tB2_m1016.Text       =  m1016.ToString("F4");
+                    tB2_m1221.Text       = m1221.ToString("F4");
+                    tB2d1_m9rmin.Text    = d1m9rmin.ToString("F4");
+                    tB2d1_m9rmax.Text    = d1m9rmax.ToString("F4");
+                    tB2d1_m9ra.Text      = d1m9ra.ToString("F4");
+                    tB2d2_m9rmin.Text    = d2m9rmin.ToString("F4");
+                    tB2d2_m9rmax.Text    = d2m9rmax.ToString("F4");
+                    tB2d2_m9ra.Text = d2m9ra.ToString("F4");
 
 
                     tB2_p.Text = row.Cells[6].Value.ToString();
@@ -1791,23 +1775,23 @@ namespace Wefa
                     this.tabControl1.SelectedTab = this.tabPage1;    
                     Button_Lupe_Click(this, new EventArgs());
                     decimal m101 = decimal.Parse(row.Cells[10].Value.ToString());
-                    tB_m101.Text = m101.ToString("N3");   
+                    tB_m101.Text = m101.ToString("F4");   
                     decimal m102 = decimal.Parse(row.Cells[11].Value.ToString());
-                    tB_m102.Text = m102.ToString("N3");      
+                    tB_m102.Text = m102.ToString("F4");      
                     decimal m103 = decimal.Parse(row.Cells[12].Value.ToString());
-                    tB_m103.Text = m103.ToString("N3");    
+                    tB_m103.Text = m103.ToString("F4");    
                     decimal m104 = decimal.Parse(row.Cells[13].Value.ToString());
-                    tB_m104.Text = m104.ToString("N3");   
+                    tB_m104.Text = m104.ToString("F4");   
                     decimal m105 = decimal.Parse(row.Cells[14].Value.ToString());
-                    tB_m105.Text = m105.ToString("N3");   
+                    tB_m105.Text = m105.ToString("F4");   
                     decimal m106 = decimal.Parse(row.Cells[15].Value.ToString());
-                    tB_m106.Text = m106.ToString("N3");   
+                    tB_m106.Text = m106.ToString("F4");   
                     decimal rmin = decimal.Parse(row.Cells[16].Value.ToString());
-                    tB_m9rmin.Text = rmin.ToString("N3");   
+                    tB_m9rmin.Text = rmin.ToString("F4");   
                     decimal rmax = decimal.Parse(row.Cells[17].Value.ToString());
-                    tB_m9rmax.Text = rmax.ToString("N3");   
+                    tB_m9rmax.Text = rmax.ToString("F4");   
                     decimal ra = decimal.Parse(row.Cells[18].Value.ToString());
-                    tB_m9ra.Text = ra.ToString("N3");   
+                    tB_m9ra.Text = ra.ToString("F4");   
 
 
                     tB_p.Text= row.Cells[6].Value.ToString();       
@@ -1832,25 +1816,25 @@ namespace Wefa
                 history = QmsDb.GetCurrentRecord2Dbr(tB2_rmn.Text, cB2_dfn.Text, cB2_pfn.Text);
                 if ((history.sdtserial != null) || (history.sptserial != null)) 
                 {
-                    tB2_m101.Text = history.dm101.ToString("N3");
-                    tB2_m102.Text = history.dm102.ToString("N3");
-                    tB2_m103.Text = history.dm103.ToString("N3");
-                    tB2_m104.Text = history.dm104.ToString("N3");
-                    tB2_m105.Text = history.dm105.ToString("N3");
-                    tB2_m106.Text = history.dm106.ToString("N3");
-                    tB2_m1011.Text = history.dm1011.ToString("N3");
-                    tB2_m1012.Text = history.dm1012.ToString("N3");
-                    tB2_m1013.Text = history.dm1013.ToString("N3");
-                    tB2_m1014.Text = history.dm1014.ToString("N3");
-                    tB2_m1015.Text = history.dm1015.ToString("N3");
-                    tB2_m1016.Text = history.dm1016.ToString("N3");
-                    tB2_m1221.Text = history.dm1221.ToString("N3");
-                    tB2d1_m9rmin.Text = history.dm9rmin.ToString("N3");
-                    tB2d1_m9rmax.Text = history.dm9rmax.ToString("N3");
-                    tB2d1_m9ra.Text = history.dm9raussen.ToString("N3");
-                    tB2d2_m9rmin.Text = history.dd2m9rmin.ToString("N3");
-                    tB2d2_m9rmax.Text = history.dd2m9rmax.ToString("N3");
-                    tB2d2_m9ra.Text = history.dd2m9raussen.ToString("N3");
+                    tB2_m101.Text = history.dm101.ToString("F4");
+                    tB2_m102.Text = history.dm102.ToString("F4");
+                    tB2_m103.Text = history.dm103.ToString("F4");
+                    tB2_m104.Text = history.dm104.ToString("F4");
+                    tB2_m105.Text = history.dm105.ToString("F4");
+                    tB2_m106.Text = history.dm106.ToString("F4");
+                    tB2_m1011.Text = history.dm1011.ToString("F4");
+                    tB2_m1012.Text = history.dm1012.ToString("F4");
+                    tB2_m1013.Text = history.dm1013.ToString("F4");
+                    tB2_m1014.Text = history.dm1014.ToString("F4");
+                    tB2_m1015.Text = history.dm1015.ToString("F4");
+                    tB2_m1016.Text = history.dm1016.ToString("F4");
+                    tB2_m1221.Text = history.dm1221.ToString("F4");
+                    tB2d1_m9rmin.Text = history.dm9rmin.ToString("F4");
+                    tB2d1_m9rmax.Text = history.dm9rmax.ToString("F4");
+                    tB2d1_m9ra.Text = history.dm9raussen.ToString("F4");
+                    tB2d2_m9rmin.Text = history.dd2m9rmin.ToString("F4");
+                    tB2d2_m9rmax.Text = history.dd2m9rmax.ToString("F4");
+                    tB2d2_m9ra.Text = history.dd2m9raussen.ToString("F4");
                 }
                 else 
                 {
@@ -1873,15 +1857,15 @@ namespace Wefa
                 history = QmsDb.GetCurrentRecord1Dbr(tB_rmn.Text, cB_dfn.Text, cB_pfn.Text);
                 if((history.sdtserial != null) || (history.sptserial != null)) 
                 {
-                    tB_m101.Text = history.dm101.ToString("N3");
-                    tB_m102.Text = history.dm102.ToString("N3");
-                    tB_m103.Text = history.dm103.ToString("N3");
-                    tB_m104.Text = history.dm104.ToString("N3");
-                    tB_m105.Text = history.dm105.ToString("N3");
-                    tB_m106.Text = history.dm106.ToString("N3");
-                    tB_m9rmin.Text = history.dm9rmin.ToString("N3");
-                    tB_m9rmax.Text = history.dm9rmax.ToString("N3");
-                    tB_m9ra.Text = history.dm9raussen.ToString("N3");
+                    tB_m101.Text = history.dm101.ToString("F4");
+                    tB_m102.Text = history.dm102.ToString("F4");
+                    tB_m103.Text = history.dm103.ToString("F4");
+                    tB_m104.Text = history.dm104.ToString("F4");
+                    tB_m105.Text = history.dm105.ToString("F4");
+                    tB_m106.Text = history.dm106.ToString("F4");
+                    tB_m9rmin.Text = history.dm9rmin.ToString("F4");
+                    tB_m9rmax.Text = history.dm9rmax.ToString("F4");
+                    tB_m9ra.Text = history.dm9raussen.ToString("F4");
                 }
                 else 
                 {
