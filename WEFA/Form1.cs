@@ -506,35 +506,42 @@ namespace Wefa
 
                     (headerobj, lineobj) = Form1_daten_erfassen();
                     LineList.Add(lineobj);
-                    // Button_new_entry_Click(this, new EventArgs());
+                    if (!string.IsNullOrWhiteSpace((headerobj.k0008_pruefer)))
+                    {
+                        // Button_new_entry_Click(this, new EventArgs());
 
-                    if (headerobj.k0100_anzahlmm == 0)
-                    {
-                        //
-                    }
-                    //At least 1 measurement entered
-                    else
-                    {
-                        foreach (DataWriterLine line in LineList)
+                        if (headerobj.k0100_anzahlmm == 0)
                         {
-                            QmsDFQWriter.SaveCachetoDB(headerobj, line);
+                            //
                         }
-                        string message = "Auftrag wurde gespeichert";
-                        MessageBox.Show(message);
-                        LineList.Clear();
-                        //DialogResult result = MessageBox.Show("Aktuelle Inhalt behalten?", "Neue Auftrag", MessageBoxButtons.YesNo);
-                        //if (result == DialogResult.Yes)
-                        //{
-                        //    LineList.Clear();
-                        //}
-                        //if (result == DialogResult.No)
-                        //{
-                        //    Button_new_rmn_Click(this, new EventArgs());
-                        //}
+                        //At least 1 measurement entered
+                        else
+                        {
+                            foreach (DataWriterLine line in LineList)
+                            {
+                                QmsDFQWriter.SaveCachetoDB(headerobj, line);
+                            }
+                            string message = "Auftrag wurde gespeichert";
+                            MessageBox.Show(message);
+                            LineList.Clear();
+                            //DialogResult result = MessageBox.Show("Aktuelle Inhalt behalten?", "Neue Auftrag", MessageBoxButtons.YesNo);
+                            //if (result == DialogResult.Yes)
+                            //{
+                            //    LineList.Clear();
+                            //}
+                            //if (result == DialogResult.No)
+                            //{
+                            //    Button_new_rmn_Click(this, new EventArgs());
+                            //}
 
-
-
+                        }
                     }
+                    else 
+                    {
+                        string errorMessage = "Bitte Prüfer Name mit eingeben.";
+                        MessageBox.Show(errorMessage);
+                    }
+                       
                    
                 }
                 else
@@ -544,25 +551,33 @@ namespace Wefa
                     DataWriterHeader headerobj = new DataWriterHeader();
 
                     (headerobj, lineobj) = Form1_daten_erfassen();
-
-                    foreach (DataWriterLine line in LineList)
+                    if (!string.IsNullOrWhiteSpace((headerobj.k0008_pruefer)))
                     {
-                        QmsDFQWriter.SaveCachetoDB(headerobj, line);
-                    }
-                    string errorMessage = "Auftrag wurde gespeichert";
-                    MessageBox.Show(errorMessage);
+                        foreach (DataWriterLine line in LineList)
+                        {
+                            QmsDFQWriter.SaveCachetoDB(headerobj, line);
+                        }
+                        string errorMessage = "Auftrag wurde gespeichert";
+                        MessageBox.Show(errorMessage);
 
-                    //this._MAiT_MM_MITTELSTANDTableAdapter2.Fill(this.wefaDataSet1._MAiT_MM_MITTELSTAND);
-                    //DialogResult result = MessageBox.Show("Aktuelle Inhalt behalten?", "Neue Auftrag", MessageBoxButtons.YesNo);
-                    //if (result == DialogResult.Yes)
-                    //{
-                    //
-                    //}
-                    //if (result == DialogResult.No)
-                    //{
-                    //    Button_new_rmn_Click(this, new EventArgs());
-                    //}
-                    LineList.Clear();
+                        //this._MAiT_MM_MITTELSTANDTableAdapter2.Fill(this.wefaDataSet1._MAiT_MM_MITTELSTAND);
+                        //DialogResult result = MessageBox.Show("Aktuelle Inhalt behalten?", "Neue Auftrag", MessageBoxButtons.YesNo);
+                        //if (result == DialogResult.Yes)
+                        //{
+                        //
+                        //}
+                        //if (result == DialogResult.No)
+                        //{
+                        //    Button_new_rmn_Click(this, new EventArgs());
+                        //}
+                        LineList.Clear();
+                    }
+                    else 
+                    {
+                        string errorMessage = "Bitte Prüfer Name mit eingeben.";
+                        MessageBox.Show(errorMessage);
+                    }
+                    
                                                           
                 }
             }
@@ -1479,32 +1494,40 @@ namespace Wefa
                 //Are there any existing Data Sätze?
                 if (dataLines == 0)
                 {
-
-                    DataWriterLine lineobj = new DataWriterLine();
+                    
+                       DataWriterLine lineobj = new DataWriterLine();
 
                     DataWriterHeader headerobj = new DataWriterHeader();
 
                     (headerobj, lineobj) = Form12_daten_erfassen();
-
-                    // button_new_entry_2_Click(this, new EventArgs());
-                    LineList.Add(lineobj);
-
-                    if (headerobj.k0100_anzahlmm == 0)
+                    if (!string.IsNullOrWhiteSpace((headerobj.k0008_pruefer)))
                     {
-                        //
-                    }
-                    //At least 1 measurement entered
-                    else
-                    {
-                        foreach (DataWriterLine line in LineList)
+                        LineList.Add(lineobj);
+
+                        if (headerobj.k0100_anzahlmm == 0)
                         {
-                            QmsDFQWriter.SaveCachetoDB2DB(headerobj, line);
-                        }                       
+                            //
+                        }
+                        //At least 1 measurement entered
+                        else
+                        {
+                            foreach (DataWriterLine line in LineList)
+                            {
+                                QmsDFQWriter.SaveCachetoDB2DB(headerobj, line);
+                            }
 
-
-                        string message = "Auftrag wurde gespeichert";
-                        MessageBox.Show(message);
+                            LineList.Clear();
+                            string message = "Auftrag wurde gespeichert";
+                            MessageBox.Show(message);
+                        }
                     }
+                    else                     
+                    {
+                        string errorMessage = "Bitte Prüfer Name mit eingeben.";
+                        MessageBox.Show(errorMessage);
+                    }
+                    // button_new_entry_2_Click(this, new EventArgs());
+                    
                 }
                 else
                 {
@@ -1513,13 +1536,22 @@ namespace Wefa
                     DataWriterHeader headerobj = new DataWriterHeader();
 
                     (headerobj, lineobj) = Form12_daten_erfassen();
-                    
-                    foreach (DataWriterLine line in LineList)
+                    if (!string.IsNullOrWhiteSpace((headerobj.k0008_pruefer)))
                     {
-                        QmsDFQWriter.SaveCachetoDB2DB(headerobj, line);
+                        foreach (DataWriterLine line in LineList)
+                        {
+                            QmsDFQWriter.SaveCachetoDB2DB(headerobj, line);
+                        }
+                        LineList.Clear();
+                        string errorMessage = "Auftrag wurde gespeichert";
+                        MessageBox.Show(errorMessage);
                     }
-                    string errorMessage = "Auftrag wurde gespeichert";
-                    MessageBox.Show(errorMessage);                    
+                    else 
+                    {
+                        string errorMessage = "Bitte Prüfer Name mit eingeben.";
+                        MessageBox.Show(errorMessage);
+                    }
+                    
                     
                     
                 }
